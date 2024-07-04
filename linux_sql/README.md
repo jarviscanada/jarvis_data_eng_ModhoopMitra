@@ -10,7 +10,7 @@ clusters. The information, stored in a relational database, can then be used by 
 LCA team to generate reports for future resource planning, such as adding or 
 removing servers.
 
-This project allows the LCA to accomplish the outlined task through various bash
+This project allows the LCA team to accomplish the outlined task through various bash
 scripts that interact with Docker containerization, PostgreSQL RDBMS and cron.
 
 ## Quick Start
