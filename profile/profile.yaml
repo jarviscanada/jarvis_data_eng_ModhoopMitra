@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_ModhoopMit
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: I am a Software Developer with 1 year of experience and a Honours Bachelor of Science in Computer Science at the University of Toronto. During my academic journey, I acquired a strong understanding of foundational computer science principles through courses pertaining to Data Structures and Algorithms, Database Design, Software Design and Web Programming. As a Software Developer at Jarvis Consulting Group, I am continuously enhancing my technical skills, staying up-to-date with industry trends, and delivering innovative solutions that meet and exceed client expectations. In my previous role as a Software Engineer at Fluid Mobility, I implemented secure authentication solutions, created and managed REST APIs and led system optimization investigations. As someone who thrives in
+summary: I am a Software Developer with 1 year of experience and an Honours Bachelor of Science in Computer Science at the University of Toronto. During my academic journey, I acquired a strong understanding of foundational computer science principles through courses pertaining to Data Structures and Algorithms, Database Design, Software Design and Web Programming. As a Software Developer at Jarvis Consulting Group, I am continuously enhancing my technical skills, staying up-to-date with industry trends, and delivering innovative solutions that meet and exceed client expectations. In my previous role as a Software Engineer at Fluid Mobility, I implemented secure authentication solutions, created and managed REST APIs and led system optimization investigations. As someone who thrives in
   challenging environments where growth is driven by pursuit of knowledge and skill development, I am excited to further contribute my acquired technical skills and positive attitude to roles where I can drive the development of innovative software solutions and effectively meet user needs.
 
 # Group your skills by level.
@@ -70,12 +70,12 @@ jarvis_projects:
 # Feel free to add more projects
 highlighted_projects:
     #project name
-  - name: "Restify"
+  - name: "Web app for restaurants (Restify)"
     #URL is optional
-    #git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
+    git_url: "https://github.com/mm-3/rest-ify"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: Developed a full-stack social media web application focused on restaurants, utilizing Django to create and extend models for user profiles, restaurant profiles, blogs, and more. Implemented a RESTful API using the Django REST framework to facilitate rapid development within the project team. Queried and updated data through the Django ORM from a SQLite database, displaying it in a React frontend user interface. The application was designed to provide a comprehensive platform for restaurant-related interactions, implemented with efficient data management and API integration, and deployed to ensure seamless user experiences.
-  - name: "Web app for Notes"
+  - name: "Web app for notes"
     git_url:
     description: Developed a note application using the MERN stack (MongoDB, Express.js, React.js, Node.js) to enhance daily user convenience. Designed the application with a user-friendly frontend UI for logging in, viewing, and creating notes. Implemented server-side functionality with Node.js and Express.js, allowing for efficient handling of user requests and data management. Deployed the application to provide seamless access and usability for users, ensuring a reliable and intuitive note-taking experience.
 
