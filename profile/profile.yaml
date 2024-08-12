@@ -44,12 +44,11 @@ jarvis_projects:
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: Developed a cluster administration system using bash scripts to manage a 10-node Rocky Linux 9 cluster interconnected via a network switch with internal IPv4 addresses. The system collects and stores cluster specifications and resource usage in a PostgreSQL database for future resource planning. The system was implemented with Docker containerization to ensure functionality across cluster machines. Development was tracked with Git and source code is stored on GitHub. Cron jobs were utilized to facilitate real-time monitoring.
-#  - name: "Core Java Apps"
-#    git_url: "/core_java"
-#    description:
-#      - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+  - name: "Core Java Apps"
+    git_url: "/core_java"
+    description:
 #      - "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-#      - "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      - "Grep App: Implemented a Java grep application that emulates the Linux 'grep' CLI command, enabling users to search files for matching regular expression input. Created with Core Java and Maven, the application captures efficient use of functional programming through Java 8 Lambda Expressions and Stream APIs. SLF4J was employed for logging and the program was manually tested and debugged with IntelliJ. Finally, the application was Dockerized to allow for easy deployment and consistent execution across different environments."
 #  - name: "Springboot App"
 #    git_url: "/springboot"
 #    description: ""
