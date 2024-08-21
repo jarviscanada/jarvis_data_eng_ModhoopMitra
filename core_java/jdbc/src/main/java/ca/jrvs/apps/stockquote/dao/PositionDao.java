@@ -99,7 +99,7 @@ public class PositionDao implements CrudDao<Position, String> {
 
     @Override
     public void deleteAll() {
-        try (PreparedStatement ps = this.c.prepareStatement(DELETE_ONE)) {
+        try (PreparedStatement ps = this.c.prepareStatement(DELETE)) {
             ps.execute();
             logger.info("Deleted all Positions.");
         } catch (SQLException e) {
