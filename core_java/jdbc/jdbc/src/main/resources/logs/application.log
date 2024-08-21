@@ -1,0 +1,41 @@
+2024-08-20 17:23:15 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-20 17:32:59 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 16:11:09 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 16:11:09 ERROR QuoteDao:67 - ERROR: syntax error at or near "WHERE"
+  Position: 162
+2024-08-21 16:14:17 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 16:14:57 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 16:17:06 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 16:17:07 INFO  QuoteDao:65 - Saved quote successfully.
+2024-08-21 16:19:18 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 16:26:33 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 16:27:25 INFO  QuoteDao:65 - Saved quote successfully.
+2024-08-21 16:28:25 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 16:28:26 INFO  QuoteDao:65 - Saved quote successfully.
+2024-08-21 16:28:52 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 16:28:52 INFO  QuoteDao:65 - Saved quote successfully.
+2024-08-21 16:29:57 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 16:29:57 INFO  QuoteDao:66 - Saved quote successfully.
+2024-08-21 16:32:28 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:19:30 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:23:21 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:27:09 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:27:54 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:31:07 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:31:37 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:32:03 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:33:44 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:34:46 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:37:36 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:40:04 INFO  QuoteDao:66 - Saved quote successfully.
+2024-08-21 17:41:46 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:42:37 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:45:44 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:47:46 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 17:47:47 INFO  QuoteDao:66 - Saved quote successfully.
+2024-08-21 17:48:46 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 19:06:06 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 19:06:06 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-21 19:06:06 INFO  QuoteDao:65 - Saved Quote: {ticker='MSFT', open=421.7, high=425.86, low=421.64, price=424.8, volume=16387581, latestTradingDay=2024-08-20, previousClose=421.53, change=3.27, changePercent='0.7757%', timestamp=2024-08-21 19:06:06.566}
+2024-08-21 19:06:23 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-21 19:06:23 INFO  QuoteDao:81 - Quote found: MSFT
