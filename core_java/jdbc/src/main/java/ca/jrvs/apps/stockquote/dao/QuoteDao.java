@@ -17,7 +17,8 @@ import java.util.Optional;
 public class QuoteDao implements CrudDao<Quote, String> {
 
     private Connection c;
-    final Logger logger = LoggerFactory.getLogger(QuoteDao.class);
+    final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
+    final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     String INSERT =
             "INSERT INTO " +
@@ -62,10 +63,10 @@ public class QuoteDao implements CrudDao<Quote, String> {
             ps.setTimestamp(10, entity.getTimestamp());
             ps.setString(11, entity.getTicker());
             ps.executeUpdate();
-            logger.info("Saved Quote: {}", entity.getTicker());
+            infoLogger.info("Saved Quote: {}", entity.getTicker());
             return entity;
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            errorLogger.error(e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -78,15 +79,15 @@ public class QuoteDao implements CrudDao<Quote, String> {
             ResultSet rs = ps.executeQuery();
             if(rs.next()) {
                 Quote quote = quoteBuilder(rs);
-                logger.info("Quote found: {}", quote.getTicker());
+                infoLogger.info("Quote found: {}", quote.getTicker());
                 return Optional.of(quote);
             }
 
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            errorLogger.error(e.getMessage());
             throw new RuntimeException(e);
         }
-        logger.info("Quote {} not found.", s);
+        infoLogger.info("Quote {} not found.", s);
         return Optional.empty();
     }
 
@@ -98,10 +99,10 @@ public class QuoteDao implements CrudDao<Quote, String> {
             while(rs.next()) {
                 quoteList.add(quoteBuilder(rs));
             }
-            logger.info("Quotes found: {}", quoteList);
+            infoLogger.info("Quotes found: {}", quoteList);
             return quoteList;
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            errorLogger.error(e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -111,9 +112,9 @@ public class QuoteDao implements CrudDao<Quote, String> {
         try (PreparedStatement ps = this.c.prepareStatement(DELETE_ONE)) {
             ps.setString(1, s);
             ps.execute();
-            logger.info("Deleted Quote {}", s);
+            infoLogger.info("Deleted Quote {}", s);
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            errorLogger.error(e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -122,9 +123,9 @@ public class QuoteDao implements CrudDao<Quote, String> {
     public void deleteAll() {
         try (PreparedStatement ps = this.c.prepareStatement(DELETE)) {
             ps.execute();
-            logger.info("Deleted all Quotes.");
+            infoLogger.info("Deleted all Quotes.");
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            errorLogger.error(e.getMessage());
             throw new RuntimeException(e);
         }
     }

@@ -15,7 +15,8 @@ import java.util.Optional;
 public class PositionDao implements CrudDao<Position, String> {
 
     private Connection c;
-    final Logger logger = LoggerFactory.getLogger(PositionDao.class);
+    final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
+    final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     String INSERT =
             "INSERT INTO " +
@@ -43,10 +44,10 @@ public class PositionDao implements CrudDao<Position, String> {
             ps.setDouble(2, entity.getValuePaid());
             ps.setString(3, entity.getTicker());
             ps.executeUpdate();
-            logger.info("Saved Position: {}", entity.getTicker());
+            infoLogger.info("Saved Position: {}", entity.getTicker());
             return entity;
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            errorLogger.error(e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -58,14 +59,14 @@ public class PositionDao implements CrudDao<Position, String> {
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
                 Position position = positionBuilder(rs);
-                logger.info("Position found: {}", position.getTicker());
+                infoLogger.info("Position found: {}", position.getTicker());
                 return Optional.of(position);
             }
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            errorLogger.error(e.getMessage());
             throw new RuntimeException(e);
         }
-        logger.info("Position {} not found.", s);
+        infoLogger.info("Position {} not found.", s);
         return Optional.empty();
     }
 
@@ -77,22 +78,27 @@ public class PositionDao implements CrudDao<Position, String> {
             while (rs.next()) {
                 positionList.add(positionBuilder(rs));
             }
-            logger.info("Positions found: {}", positionList);
+            infoLogger.info("Positions found: {}", positionList);
             return positionList;
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            errorLogger.error(e.getMessage());
             throw new RuntimeException(e);
         }
     }
 
     @Override
     public void deleteById(String s) throws IllegalArgumentException {
+        Optional<Position> pos = findById(s);
+        if (!pos.isPresent()) {
+            errorLogger.error("No shares owned for {}.", s);
+            throw new IllegalArgumentException();
+        }
         try (PreparedStatement ps = this.c.prepareStatement(DELETE_ONE)) {
             ps.setString(1, s);
             ps.execute();
-            logger.info("Deleted Position: {}", s);
+            infoLogger.info("Deleted Position: {}", s);
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            errorLogger.error(e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -101,9 +107,9 @@ public class PositionDao implements CrudDao<Position, String> {
     public void deleteAll() {
         try (PreparedStatement ps = this.c.prepareStatement(DELETE)) {
             ps.execute();
-            logger.info("Deleted all Positions.");
+            infoLogger.info("Deleted all Positions.");
         } catch (SQLException e) {
-            logger.error(e.getMessage());
+            errorLogger.error(e.getMessage());
             throw new RuntimeException(e);
         }
     }

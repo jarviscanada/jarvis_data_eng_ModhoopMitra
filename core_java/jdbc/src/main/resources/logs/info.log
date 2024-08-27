@@ -1,0 +1,5 @@
+2024-08-27 19:44:49 INFO  infoLogger:62 - Position found: AAPL
+2024-08-27 19:44:49 INFO  infoLogger:62 - Position found: AAPL
+2024-08-27 19:44:49 INFO  infoLogger:47 - Saved Position: AAPL
+2024-08-27 19:57:11 INFO  infoLogger:42 - Received response from Alpha Vantage API.
+2024-08-27 19:57:12 INFO  infoLogger:49 - No data for this symbol: BADSYMBOL

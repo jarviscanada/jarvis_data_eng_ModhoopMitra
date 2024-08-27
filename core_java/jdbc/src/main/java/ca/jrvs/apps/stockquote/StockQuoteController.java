@@ -30,6 +30,7 @@ public class StockQuoteController {
             if (!input.hasNextInt()) {
                 System.out.print("Invalid option. Please try again.");
                 input.next();
+                continue;
             }
 
             int option = input.nextInt();
@@ -53,8 +54,6 @@ public class StockQuoteController {
                     return;
                 default:
                     System.out.println("Invalid option. Please try again.");
-
-
             }
         }
     }
@@ -102,6 +101,9 @@ public class StockQuoteController {
 
         try {
             Position position = positionService.buy(ticker, numberOfShares, quote.get().getPrice());
+            if (position == null) {
+                throw new IllegalArgumentException();
+            }
         } catch (IllegalArgumentException e) {
             System.out.println("Invalid number of shares, check available shares. Please try again.");
             return;
@@ -132,7 +134,7 @@ public class StockQuoteController {
         System.out.println("3. Buy a Stock");
         System.out.println("4. Sell a Stock");
         System.out.println("5. Exit");
-        System.out.print("Select a numeric option: ");
+        System.out.print("Select a menu option: ");
     }
 
 }

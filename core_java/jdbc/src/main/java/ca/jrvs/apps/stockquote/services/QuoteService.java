@@ -10,7 +10,8 @@ import java.util.Optional;
 
 public class QuoteService {
 
-    Logger logger = LoggerFactory.getLogger(QuoteService.class);
+    final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
+    final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     private QuoteDao quoteDao;
     private QuoteHttpHelper httpHelper;
@@ -30,7 +31,7 @@ public class QuoteService {
             Quote quote = httpHelper.fetchQuoteInfo(ticker); // fetchQuoteInfo throws IllegalArgException if ticker does not exist
             return Optional.ofNullable(quoteDao.save(quote));
         } catch (IllegalArgumentException e) {
-            logger.error("Provided ticker is not valid.");
+            errorLogger.error("Provided ticker is not valid.");
             throw new IllegalArgumentException();
         }
     }

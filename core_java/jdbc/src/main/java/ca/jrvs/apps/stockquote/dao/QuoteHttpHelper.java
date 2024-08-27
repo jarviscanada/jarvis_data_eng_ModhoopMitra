@@ -13,7 +13,8 @@ import java.sql.Timestamp;
 
 public class QuoteHttpHelper {
 
-    final Logger logger = LoggerFactory.getLogger(QuoteHttpHelper.class);
+    final Logger infoLogger = LoggerFactory.getLogger("infoLogger");
+    final Logger errorLogger = LoggerFactory.getLogger("errorLogger");
 
     private final String apiKey;
     private final OkHttpClient client;
@@ -38,14 +39,14 @@ public class QuoteHttpHelper {
 
         Quote quote = new Quote();
         try (Response response = client.newCall(request).execute()) {
-            logger.info("Received response from Alpha Vantage API.");
+            infoLogger.info("Received response from Alpha Vantage API.");
 
             ObjectMapper om = new ObjectMapper();
             JsonNode resNode = om.readTree(response.body().string());
             JsonNode quoteNode = resNode.get("Global Quote");
 
             if (quoteNode == null || quoteNode.isEmpty()) {
-                logger.info("No data for this symbol: {}", symbol);
+                infoLogger.info("No data for this symbol: {}", symbol);
                 throw new IllegalArgumentException();
             }
 
@@ -53,7 +54,7 @@ public class QuoteHttpHelper {
             quote.setTimestamp(new Timestamp(System.currentTimeMillis()));
 
         } catch (IOException e) {
-            logger.error(e.getMessage());
+            errorLogger.error(e.getMessage());
         }
 
         return quote;
