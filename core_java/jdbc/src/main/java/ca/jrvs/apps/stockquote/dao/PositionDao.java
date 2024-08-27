@@ -24,7 +24,7 @@ public class PositionDao implements CrudDao<Position, String> {
     String UPDATE =
             "UPDATE position SET " +
                     "number_of_shares = ?, " +
-                    "value_paid = ?, " +
+                    "value_paid = ? " +
                     "WHERE symbol = ?";
     String SELECT_ONE = "SELECT * FROM position WHERE symbol = ?";
     String SELECT = "SELECT * FROM position";

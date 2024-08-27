@@ -28,21 +28,22 @@ public class QuoteDaoTest {
     }
 
     @Test
-    void QuoteDaoSaveTest() {
-        Quote expected = quoteDao.save(quote);
-        Quote actual = quote;
+    void quoteDaoSaveTest() {
+        Quote actual = quoteDao.save(quote);
+        Quote expected = quote;
         assertEquals(expected, actual);
     }
 
-    @Test void QuoteDaoFindByIdTest() {
-        Optional<Quote> expected = quoteDao.findById("MSFT");
-        assertNotNull(expected);
+    @Test
+    void quoteDaoFindByIdTest() {
+        Optional<Quote> actual = quoteDao.findById("MSFT");
+        assertNotNull(actual);
     }
 
     @Test
-    void QuoteDaoFindAll() {
-        Iterable<Quote> expected = quoteDao.findAll();
-        assertNotNull(expected);
+    void quoteDaoFindAll() {
+        Iterable<Quote> actual = quoteDao.findAll();
+        assertNotNull(actual);
     }
 
 }

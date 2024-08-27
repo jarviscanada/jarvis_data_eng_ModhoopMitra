@@ -46,15 +46,12 @@ public class QuoteHttpHelper {
 
             if (quoteNode == null || quoteNode.isEmpty()) {
                 logger.info("No data for this symbol: {}", symbol);
-                return null;
+                throw new IllegalArgumentException();
             }
 
             quote = om.convertValue(quoteNode, Quote.class);
             quote.setTimestamp(new Timestamp(System.currentTimeMillis()));
 
-        } catch (IllegalArgumentException e) {
-            logger.error(e.getMessage());
-            throw new IllegalArgumentException(e);
         } catch (IOException e) {
             logger.error(e.getMessage());
         }

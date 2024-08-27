@@ -4,3 +4,68 @@
 2024-08-20 17:23:56 INFO  QuoteHttpHelper:48 - No data for this symbol.
 2024-08-20 17:25:24 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
 2024-08-20 17:25:25 INFO  QuoteHttpHelper:48 - No data for this symbol: MSFTsss
+2024-08-27 17:04:13 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 17:04:13 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-27 17:04:13 INFO  QuoteDao:65 - Saved Quote: MSFT
+2024-08-27 17:05:25 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 17:05:25 INFO  QuoteDao:89 - Quote AAPL not found.
+2024-08-27 17:05:25 INFO  QuoteDao:65 - Saved Quote: AAPL
+2024-08-27 17:06:10 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 17:06:11 INFO  QuoteDao:89 - Quote GGG not found.
+2024-08-27 17:06:11 INFO  QuoteDao:65 - Saved Quote: GGG
+2024-08-27 17:06:32 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 17:06:32 INFO  QuoteHttpHelper:48 - No data for this symbol: FAKESYMBOL
+2024-08-27 17:06:32 ERROR QuoteService:33 - Provided ticker is not valid.
+2024-08-27 17:09:01 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 17:09:01 INFO  QuoteHttpHelper:48 - No data for this symbol: fakessss
+2024-08-27 17:09:01 ERROR QuoteService:33 - Provided ticker is not valid.
+2024-08-27 17:16:55 INFO  PositionDao:80 - Positions found: [{ticker='MSFT', numOfShares=11, valuePaid=105.0}]
+2024-08-27 17:50:45 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 17:50:45 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-27 17:50:45 INFO  QuoteDao:65 - Saved Quote: MSFT
+2024-08-27 17:51:24 INFO  PositionDao:68 - Position msft not found.
+2024-08-27 17:51:24 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 17:51:24 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-27 17:51:24 INFO  QuoteDao:65 - Saved Quote: MSFT
+2024-08-27 17:51:24 INFO  PositionDao:68 - Position msft not found.
+2024-08-27 17:51:24 ERROR PositionDao:49 - ERROR: insert or update on table "position" violates foreign key constraint "symbol_fk"
+  Detail: Key (symbol)=(msft) is not present in table "quote".
+2024-08-27 17:52:31 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 17:52:32 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-27 17:52:32 INFO  QuoteDao:65 - Saved Quote: MSFT
+2024-08-27 17:52:35 INFO  PositionDao:68 - Position msft not found.
+2024-08-27 17:52:35 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 17:52:35 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-27 17:52:35 INFO  QuoteDao:65 - Saved Quote: MSFT
+2024-08-27 17:52:35 INFO  PositionDao:68 - Position msft not found.
+2024-08-27 17:52:35 ERROR PositionDao:49 - ERROR: insert or update on table "position" violates foreign key constraint "symbol_fk"
+  Detail: Key (symbol)=(msft) is not present in table "quote".
+2024-08-27 17:53:17 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 17:53:18 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-27 17:53:18 INFO  QuoteDao:65 - Saved Quote: MSFT
+2024-08-27 17:53:19 INFO  PositionDao:61 - Position found: MSFT
+2024-08-27 17:53:19 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 17:53:19 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-27 17:53:19 INFO  QuoteDao:65 - Saved Quote: MSFT
+2024-08-27 17:53:19 INFO  PositionDao:61 - Position found: MSFT
+2024-08-27 17:53:19 INFO  PositionDao:46 - Saved Position: MSFT
+2024-08-27 17:53:56 INFO  PositionDao:80 - Positions found: [{ticker='MSFT', numOfShares=21, valuePaid=4239.9}]
+2024-08-27 18:17:15 INFO  PositionDao:93 - Deleted Position: MSFT
+2024-08-27 18:17:27 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 18:17:28 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-27 18:17:28 INFO  QuoteDao:65 - Saved Quote: MSFT
+2024-08-27 18:19:57 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 18:19:57 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-27 18:19:57 INFO  QuoteDao:65 - Saved Quote: MSFT
+2024-08-27 18:21:46 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 18:21:46 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-27 18:21:46 INFO  QuoteDao:65 - Saved Quote: MSFT
+2024-08-27 18:22:04 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 18:22:04 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-27 18:22:04 INFO  QuoteDao:65 - Saved Quote: MSFT
+2024-08-27 18:22:06 INFO  PositionDao:68 - Position MSFT not found.
+2024-08-27 18:22:06 INFO  QuoteHttpHelper:41 - Received response from Alpha Vantage API.
+2024-08-27 18:22:06 INFO  QuoteDao:81 - Quote found: MSFT
+2024-08-27 18:22:06 INFO  QuoteDao:65 - Saved Quote: MSFT
+2024-08-27 18:22:06 INFO  PositionDao:68 - Position MSFT not found.
+2024-08-27 18:22:06 INFO  PositionDao:46 - Saved Position: MSFT

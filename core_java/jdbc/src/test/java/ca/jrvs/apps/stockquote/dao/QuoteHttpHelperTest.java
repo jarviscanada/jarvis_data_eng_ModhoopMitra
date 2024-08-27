@@ -23,7 +23,7 @@ public class QuoteHttpHelperTest {
     }
 
     @Test
-    void QuoteMsftTest() {
+    void quoteMsftTest() {
         Quote expected = new Quote();
         expected.setTicker("MSFT");
         expected.setOpen(418.96);
