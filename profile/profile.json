@@ -26,6 +26,14 @@
       "description": "Developed a cluster administration system using bash scripts to manage a 10-node Rocky Linux 9 cluster interconnected via a network switch with internal IPv4 addresses. The system collects and stores cluster specifications and resource usage in a PostgreSQL database for future resource planning. The system was implemented with Docker containerization to ensure functionality across cluster machines. Development was tracked with Git and source code is stored on GitHub. Cron jobs were utilized to facilitate real-time monitoring.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
+    },
+    {
+      "description": [
+        "JDBC App: Implemented a Java Stock Quote command-line application that allows users to simulate a personal stock wallet. Integrated an external API into the application to fetch real-time stock data, ensuring up-to-date information. Technologies utilized in this project include JDBC for database interactions, PostgreSQL for the database management system, Maven for application dependency management and project building, and Docker for containerization and distribution. The application was thoroughly tested using JUnit and Mockito through various unit and integration tests.",
+        "Grep App: Implemented a Java grep application that emulates the Linux 'grep' CLI command, enabling users to search files for matching regular expression input. Created with Core Java and Maven, the application captures efficient use of functional programming through Java 8 Lambda Expressions and Stream APIs. SLF4J was employed for logging and the program was manually tested and debugged with IntelliJ. Finally, the application was Dockerized to allow for easy deployment and consistent execution across different environments."
+      ],
+      "git_url": "/core_java",
+      "name": "Core Java Apps"
     }
   ],
   "name": "Modhoop Mitra",
