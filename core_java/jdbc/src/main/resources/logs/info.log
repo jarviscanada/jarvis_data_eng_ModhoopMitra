@@ -3,3 +3,26 @@
 2024-08-27 19:44:49 INFO  infoLogger:47 - Saved Position: AAPL
 2024-08-27 19:57:11 INFO  infoLogger:42 - Received response from Alpha Vantage API.
 2024-08-27 19:57:12 INFO  infoLogger:49 - No data for this symbol: BADSYMBOL
+2024-08-28 14:50:30 INFO  infoLogger:42 - Received response from Alpha Vantage API.
+2024-08-28 14:50:30 INFO  infoLogger:49 - No data for this symbol: ASD
+2024-08-28 14:50:48 INFO  infoLogger:42 - Received response from Alpha Vantage API.
+2024-08-28 14:50:48 INFO  infoLogger:49 - No data for this symbol: ADKALKDAKSDJALKSDAJSKLAJLKSJD
+2024-08-28 14:50:53 INFO  infoLogger:77 - Finding all current Positions.
+2024-08-28 14:50:53 INFO  infoLogger:81 - Positions found: [{ticker='MSFT', numOfShares=100, valuePaid=41349.0}, {ticker='AAPL', numOfShares=105, valuePaid=23853.9}]
+2024-08-28 14:51:22 INFO  infoLogger:42 - Received response from Alpha Vantage API.
+2024-08-28 14:51:22 INFO  infoLogger:49 - No data for this symbol: FB
+2024-08-28 14:51:31 INFO  infoLogger:42 - Received response from Alpha Vantage API.
+2024-08-28 14:51:31 INFO  infoLogger:90 - Quote FBM not found.
+2024-08-28 14:51:31 INFO  infoLogger:66 - Saved Quote: FBM
+2024-08-28 14:51:58 INFO  infoLogger:69 - Position FBM not found.
+2024-08-28 14:51:58 INFO  infoLogger:42 - Received response from Alpha Vantage API.
+2024-08-28 14:51:58 INFO  infoLogger:82 - Quote found: FBM
+2024-08-28 14:51:58 INFO  infoLogger:66 - Saved Quote: FBM
+2024-08-28 14:51:58 INFO  infoLogger:46 - Bought shares.
+2024-08-28 14:51:58 INFO  infoLogger:69 - Position FBM not found.
+2024-08-28 14:51:58 INFO  infoLogger:47 - Saved Position: FBM
+2024-08-28 14:54:35 INFO  infoLogger:62 - Position found: FBM
+2024-08-28 14:54:35 INFO  infoLogger:99 - Deleted Position: FBM
+2024-08-28 14:54:35 INFO  infoLogger:66 - Sold all FBM shares.
+2024-08-28 14:54:39 INFO  infoLogger:77 - Finding all current Positions.
+2024-08-28 14:54:39 INFO  infoLogger:81 - Positions found: [{ticker='MSFT', numOfShares=100, valuePaid=41349.0}, {ticker='AAPL', numOfShares=105, valuePaid=23853.9}]
