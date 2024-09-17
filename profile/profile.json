@@ -34,6 +34,11 @@
       ],
       "git_url": "/core_java",
       "name": "Core Java Apps"
+    },
+    {
+      "description": "Developed a dynamic frontend application using TypeScript and Angular, designed to interface seamlessly with a Spring Boot backend for trading data. Implemented key features including a comprehensive dashboard for viewing and managing traders, a daily quotes list, and detailed trader profiles with functionalities for creating new traders, adding quotes, and managing account funds. The application was containerized using Docker for streamlined deployment and source code was managed through GitHub. Unit tests were conducted to ensure the reliability and accuracy of the application's features, covering various aspects such as component interactions, service logic, and data integrity.",
+      "git_url": "/javascript/angular-trading-ui",
+      "name": "Angular Trading App"
     }
   ],
   "name": "Modhoop Mitra",

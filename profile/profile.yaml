@@ -49,9 +49,9 @@ jarvis_projects:
     description:
       - "JDBC App: Implemented a Java Stock Quote command-line application that allows users to simulate a personal stock wallet. Integrated an external API into the application to fetch real-time stock data, ensuring up-to-date information. Technologies utilized in this project include JDBC for database interactions, PostgreSQL for the database management system, Maven for application dependency management and project building, and Docker for containerization and distribution. The application was thoroughly tested using JUnit and Mockito through various unit and integration tests."
       - "Grep App: Implemented a Java grep application that emulates the Linux 'grep' CLI command, enabling users to search files for matching regular expression input. Created with Core Java and Maven, the application captures efficient use of functional programming through Java 8 Lambda Expressions and Stream APIs. SLF4J was employed for logging and the program was manually tested and debugged with IntelliJ. Finally, the application was Dockerized to allow for easy deployment and consistent execution across different environments."
-#  - name: "Springboot App"
-#    git_url: "/springboot"
-#    description: ""
+  - name: "Angular Trading App"
+    git_url: "/javascript/angular-trading-ui"
+    description: "Developed a dynamic frontend application using TypeScript and Angular, designed to interface seamlessly with a Spring Boot backend for trading data. Implemented key features including a comprehensive dashboard for viewing and managing traders, a daily quotes list, and detailed trader profiles with functionalities for creating new traders, adding quotes, and managing account funds. The application was containerized using Docker for streamlined deployment and source code was managed through GitHub. Unit tests were conducted to ensure the reliability and accuracy of the application's features, covering various aspects such as component interactions, service logic, and data integrity."
 #  - name: "Python Data Analytics"
 #    git_url: "/python_data_analytics"
 #    description: ""
