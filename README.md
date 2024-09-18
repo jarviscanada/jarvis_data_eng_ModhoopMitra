@@ -6,7 +6,7 @@ I am a Software Developer with one year of experience and an Honours Bachelor of
 
 **Proficient:** Python, Java, Linux/Bash, RDBMS/SQL, Docker, Agile/Scrum, Git
 
-**Competent:** JavaScript, C#, Django, React, ASP.NET
+**Competent:** JavaScript, C#, Django, React, Angular, ASP.NET
 
 **Familiar:** R, C, Node, Express, MongoDB/NoSQL, Google Cloud Platform, Bootstrap, Postman
 
