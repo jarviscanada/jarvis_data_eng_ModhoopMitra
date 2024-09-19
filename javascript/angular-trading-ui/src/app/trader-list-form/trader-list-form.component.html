@@ -1,0 +1,33 @@
+<div>
+
+  <mat-dialog-content>
+    <p>First Name:</p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.firstName" placeholder="First Name"/>
+    </mat-form-field>
+    <p>Last Name:</p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.lastName" placeholder="Last Name"/>
+    </mat-form-field>
+    <p>Date of birth:</p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.dob" placeholder="Date of birth"/>
+    </mat-form-field>
+    <p>Country:</p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.country" placeholder="Country"/>
+    </mat-form-field>
+    <p>Email:</p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.email" placeholder="Email"/>
+    </mat-form-field>
+
+    <mat-dialog-actions>
+      <button (click)="onNoClick()">Cancel</button>
+      <button mat-raised-button color="primary" [mat-dialog-close]="data">Add</button>
+    </mat-dialog-actions>
+    
+
+  </mat-dialog-content>
+
+</div>

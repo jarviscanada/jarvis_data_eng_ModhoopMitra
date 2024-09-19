@@ -1,0 +1,33 @@
+<h1> Account Information</h1>
+<div class="container">
+  <mat-card>
+    <mat-card-title> 
+      {{ trader.firstName }} {{ trader.lastName }}
+
+    </mat-card-title>
+
+    <mat-card-content>
+      <p> Date Of Birth: {{ trader.dob }} </p>
+      <p> Country: {{ trader.country }}</p>
+      <p> Email: {{ trader.email }}</p>
+    </mat-card-content>
+    <mat-card-footer>
+      Balance: ${{ trader.amount }}
+    </mat-card-footer>
+  </mat-card>
+
+  <mat-card>
+    <div class="button-container">
+      <button mat-raised-button>
+        Deposit Funds
+      </button>
+  
+      <button mat-raised-button>
+        Withdraw Funds
+      </button>
+    </div>
+  </mat-card>
+
+</div>
+
+

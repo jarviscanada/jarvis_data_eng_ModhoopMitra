@@ -43,4 +43,29 @@ export class TraderListService {
     return ['First Name', 'Last Name', 'Email', 'DateOfBirth', 'Country', 'Actions']
   }
 
+  getTrader(id:number): Observable<Trader> {
+    const trader = this.traderList.filter(t => t.id == id)[0];
+    return of(trader);
+  }
+
+  deleteTrader(id: number): void {
+    //const index:number = this.traderList.findIndex(trader => trader.id === id)
+    //console.log(index)
+    //if (index != -1) {
+      this.traderList = this.traderList.filter(t => t.id !== id);
+      //this.traderList.filter(index, 1);
+      //this.traderList = [...this.traderList];
+      //console.log(this.traderList);
+    //}
+  }
+
+  addTrader(trader:Trader): Promise<any> {
+    const id:number = Math.floor(10000 + Math.random() * 90000);
+    trader.id = id;
+    trader.key = id.toString();
+    this.traderList.push(trader);
+    this.traderList = [...this.traderList]
+    return Promise.resolve();
+  }
+
 }

@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+mat-card {
+  
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 15px;
+  
+}
+
+mat-card-title {
+  text-decoration: underline;
+  padding-bottom: 5px;
+}
+
+mat-card-footer {
+  padding-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.button-container button {
+  flex: 1;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+
+}
