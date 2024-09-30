@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { TraderListService } from '../trader-list.service';
 import { Trader } from '../trader';
 import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { TraderFundsFormComponent } from '../trader-funds-form/trader-funds-form.component';
+import { TraderEditFormComponent } from '../trader-edit-form/trader-edit-form.component';
 
 @Component({
   selector: 'app-trader-account',
@@ -22,7 +25,13 @@ export class TraderAccountComponent implements OnInit {
     actions: ''
   };
 
-  constructor(private traderListService: TraderListService, private route: ActivatedRoute) {}
+  amount: number = 0;
+
+  constructor(
+    private traderListService: TraderListService, 
+    private route: ActivatedRoute,
+    public dialog: MatDialog,
+  ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -33,7 +42,73 @@ export class TraderAccountComponent implements OnInit {
       })
     })
     console.log(this.trader)
+  }
 
+  openDialogDeposit(): void {
+    const dialogRef = this.dialog.open(TraderFundsFormComponent, {
+      width: '40vw',
+      data: this.amount
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.traderListService.addFunds(this.trader.id, result).subscribe(
+          {
+            next: response => {
+              this.trader.amount = response.amount
+              console.log('Deposit success', response)
+            },
+            error: error => {
+              console.log('Deposit failed', error)
+            }    
+          }
+        )
+      }
+    })
+  }
+
+  openDialogWithdraw(): void {
+    const dialogRef = this.dialog.open(TraderFundsFormComponent, {
+      width: '40vw',
+      data: this.amount
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.traderListService.subtractFunds(this.trader.id, result).subscribe({
+          next: response => {
+            this.trader.amount = response.amount
+            console.log('Withdraw success', response)
+          },
+          error: error => {
+            console.log('Withdraw failed', error)
+          }
+        })
+      }
+    })
+  }
+
+  openDialogEdit(): void {
+    const dialogRef = this.dialog.open(TraderEditFormComponent, {
+      width: '40vw',
+      data: {
+        firstName: this.trader.firstName,
+        lastName: this.trader.lastName,
+        email: this.trader.email,
+      }
+    })
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.traderListService.editTrader(this.trader.id, result).subscribe({
+          next: response => {
+            this.trader = response
+            console.log('Update success', response)
+          },
+          error: error => {
+            console.error('Update failed', error)
+          }
+        });
+      }
+    })
   }
 
 }

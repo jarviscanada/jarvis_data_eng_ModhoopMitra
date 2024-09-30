@@ -19,6 +19,9 @@ import { TraderListComponent } from './trader-list/trader-list.component';
 import { TraderListFormComponent } from './trader-list-form/trader-list-form.component';
 import { TraderAccountComponent } from './trader-account/trader-account.component';
 import { TraderFundsFormComponent } from './trader-funds-form/trader-funds-form.component';
+import { QuoteListComponent } from './quote-list/quote-list.component';
+import { TraderEditFormComponent } from './trader-edit-form/trader-edit-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -29,7 +32,9 @@ import { TraderFundsFormComponent } from './trader-funds-form/trader-funds-form.
     TraderListComponent,
     TraderListFormComponent,
     TraderAccountComponent,
-    TraderFundsFormComponent
+    TraderFundsFormComponent,
+    QuoteListComponent,
+    TraderEditFormComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +48,7 @@ import { TraderFundsFormComponent } from './trader-funds-form/trader-funds-form.
     MatInputModule,
     MatButtonModule,
     MatCardModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,11 +21,19 @@ export class TraderListComponent implements OnInit {
       this.traders = data;
     })
     this.columns = this.traderListService.getColumns();
+    
   }
 
   deleteTrader(id: number): void {
-    this.traderListService.deleteTrader(id);
-    this.ngOnInit();
+    this.traderListService.deleteTrader(id).subscribe({
+      next: response => {
+        this.traders = this.traders.filter(t => t.id !== id)
+        console.log('Delete success', response)
+      },
+      error: error => {
+        console.log('Delete failed', error)
+      }
+    });
   }
 
   openDialog() {
@@ -44,19 +52,17 @@ export class TraderListComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.traderListService.addTrader(result).then(res => {
-
-          this.traderListService.getDataSource().subscribe(traderData => {
-            this.traders = traderData
-    
-          })
-          
-          let traderColumns = this.traderListService.getColumns();
-          this.columns = traderColumns;
+        this.traderListService.addTrader(result).subscribe({
+          next: response => {
+            this.traders.push(response)
+            this.traders = [...this.traders]
+            console.log('Add success', response)
+          },
+          error: error => {
+            console.log('Add failed', error)
+          }
         })
       }
     })
-
   }
-
 }

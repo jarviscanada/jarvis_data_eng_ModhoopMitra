@@ -43,13 +43,12 @@
       <th mat-header-cell *matHeaderCellDef> Actions </th>
       <td mat-cell *matCellDef="let element">
         <div class="actions-container">
-          <button class="actions-button" mat-button (click)="deleteTrader(element.id)">
-            <mat-icon>delete_outline</mat-icon>
-          </button>
-
           <a class="actions-button" mat-button routerLink="trader/{{element.id}}">
             <mat-icon>info</mat-icon>
           </a>
+          <button class="actions-button" mat-button (click)="deleteTrader(element.id)">
+            <mat-icon>delete_outline</mat-icon>
+          </button>
         </div>
       </td>
       

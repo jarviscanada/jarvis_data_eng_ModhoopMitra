@@ -33,6 +33,10 @@ mat-card-footer {
   flex: 1;
   height: 100px;
   padding: 10px;
-  margin: 10px;
+  margin: 5px;
 
+}
+
+.edit-button {
+  padding: 10px;
 }

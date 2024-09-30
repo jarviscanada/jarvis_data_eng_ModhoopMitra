@@ -1,1 +1,14 @@
-<p>trader-funds-form works!</p>
+<div>
+ <mat-dialog-content>
+  Amount:
+  <mat-form-field>
+    <input matInput type="number" [(ngModel)]="data"/>
+  </mat-form-field>
+ </mat-dialog-content>
+
+ <mat-dialog-actions>
+  <button mat-raised-button (click)="closeDialog()">Cancel</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="data">Confirm</button>
+ </mat-dialog-actions>
+
+</div>

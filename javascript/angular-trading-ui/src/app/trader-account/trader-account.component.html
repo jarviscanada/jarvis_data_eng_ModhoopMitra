@@ -11,18 +11,21 @@
       <p> Country: {{ trader.country }}</p>
       <p> Email: {{ trader.email }}</p>
     </mat-card-content>
-    <mat-card-footer>
-      Balance: ${{ trader.amount }}
-    </mat-card-footer>
+    <div class="edit-button">
+      <button mat-raised-button color="primary" (click)="openDialogEdit()">Edit Information</button>
+    </div>
   </mat-card>
 
   <mat-card>
+    <div>
+      <h4>Balance: ${{ trader.amount }}</h4>
+    </div>
     <div class="button-container">
-      <button mat-raised-button>
+      <button mat-raised-button color="primary" (click)="openDialogDeposit()">
         Deposit Funds
       </button>
   
-      <button mat-raised-button>
+      <button mat-raised-button color="primary" (click)="openDialogWithdraw()">
         Withdraw Funds
       </button>
     </div>
