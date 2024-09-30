@@ -49,4 +49,4 @@ Write at least three things you want to improve
 e.g. 
 - Handle the adding and removing of quotes
 - Add pagination/filtering for large datasets
-- Add inputdata validation
+- Add input data validation
