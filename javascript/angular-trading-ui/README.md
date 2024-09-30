@@ -29,7 +29,7 @@ A trading information system designed to facilitate interaction between traders 
 
 ### Components:
 
-  Developed components for displaying lists of traders and quotes, as well as creating new traders. Utilized Angular Material components, such as tables and forms, for a consistency.
+  Developed components for displaying lists of traders and quotes, as well as creating new traders. Utilized Angular Material components, such as tables and forms, for more consistent UI.
 
 ### Routing:
 
