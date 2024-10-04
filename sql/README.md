@@ -1,6 +1,11 @@
 # Introduction
 
-
+This project serves as a comprehensive learning activity for mastering SQL and RDBMS skills. The primary objective is to 
+provide hands-on experience in setting up and managing a PostgreSQL database through the execution of various SQL queries. 
+The database system is designed specifically for club management, assisting the staff team in overseeing member activities 
+and facility usage. Built on PostgreSQL, it ensures reliable data storage and management, connecting members, their bookings, 
+and facilities for easy retrieval and secure handling. The environment is containerized using Docker, changes are tracked with 
+Git, and pgAdmin4 can be used as the SQL interface.
 
 # SQL Queries
 
