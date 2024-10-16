@@ -1,0 +1,248 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Trading Backend API",
+    "version": "1.0.0"
+  },
+  "basePath": "/",
+  "schemes": ["http", "https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/api/quote/dailyList": {
+      "get": {
+        "summary": "Fetch quotes from API",
+        "tags": ["Quote"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Quote"
+              }
+            }
+          }
+        }
+      }
+    },
+    "api/quote/{quoteId}": {
+      "get": {
+        "summary": "Fetch quote by ID",
+        "tags": ["Quote"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "items": {
+                "$ref": "#/definitions/Quote"
+              }
+            }
+          }
+        }
+      }
+    },
+    "api/trader/": {
+      "get": {
+        "summary": "Fetch traders from API",
+        "tags": ["Trader"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Trader"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Add trader to API",
+        "tags": ["Trader"],
+        "responses": {
+          "201": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "items": {
+                "$ref": "#/definitions/Trader"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete trader from API",
+        "tags": ["Trader"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "items": {
+                "$ref": "#/definitions/Trader"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/account/transactionHistory/{traderId}": {
+      "get": {
+        "summary": "Fetch trader transaction history by ID",
+        "tags": ["AccountTransaction"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AccountTransaction"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/account/accountBalance/{traderId}": {
+      "get": {
+        "summary": "Fetch trader account balance by ID",
+        "tags": ["AccountTransaction"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AccountTransaction"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/account/deposit/{traderId}": {
+      "post": {
+        "summary": "Add account deposit by ID",
+        "tags": ["AccountTransaction"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AccountTransaction"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/account/withdraw/{traderId}": {
+      "post": {
+        "summary": "Add account withdrawal by ID",
+        "tags": ["AccountTransaction"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AccountTransaction"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Quote": {
+      "type": "object",
+      "properties": {
+        "ticker": {
+          "type": "string",
+          "description": "Stock symbol representing the quote"
+        },
+        "last_price": {
+          "type": "number",
+          "format": "double",
+          "description": "The last price of the stock"
+        },
+        "bid_price": {
+          "type": "number",
+          "format": "double",
+          "description": "The bid price for the stock"
+        },
+        "bid_size": {
+          "type": "number",
+          "format": "double",
+          "description": "The bid size for the stock"
+        },
+        "ask_price": {
+          "type": "number",
+          "format": "double",
+          "description": "The ask price for the stock"
+        },
+        "ask_size": {
+          "type": "number",
+          "format": "double",
+          "description": "The ask size for the stock"
+        }
+      }
+    },
+    "Trader": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Unique identifier for the trader"
+        },
+        "firstName": {
+          "type": "string",
+          "description": "Trader's first name"
+        },
+        "lastName": {
+          "type": "string",
+          "description": "Trader's last name"
+        },
+        "email": {
+          "type": "string",
+          "description": "Trader's email address"
+        },
+        "dob": {
+          "type": "string",
+          "format": "date",
+          "description": "Trader's date of birth"
+        },
+        "country": {
+          "type": "string",
+          "description": "Trader's country of residence"
+        }
+      }
+    },
+    "AccountTransaction": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Transaction ID"
+        },
+        "amount": {
+          "type": "number",
+          "description": "Transaction amount"
+        },
+        "trader_id": {
+          "type": "integer",
+          "format": "int32",
+          "description": "ID of the trader associated with the transaction"
+        }
+      }
+    }
+  }
+}
