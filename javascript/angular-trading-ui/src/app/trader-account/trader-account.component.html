@@ -1,0 +1,36 @@
+<h1> Account Information</h1>
+<div class="container">
+  <mat-card>
+    <mat-card-title> 
+      {{ trader.firstName }} {{ trader.lastName }}
+
+    </mat-card-title>
+
+    <mat-card-content>
+      <p> Date Of Birth: {{ trader.dob }} </p>
+      <p> Country: {{ trader.country }}</p>
+      <p> Email: {{ trader.email }}</p>
+    </mat-card-content>
+    <div class="edit-button">
+      <button mat-raised-button color="primary" (click)="openDialogEdit()">Edit Information</button>
+    </div>
+  </mat-card>
+
+  <mat-card>
+    <div>
+      <h4>Balance: ${{ trader.amount }}</h4>
+    </div>
+    <div class="button-container">
+      <button mat-raised-button color="primary" (click)="openDialogDeposit()">
+        Deposit Funds
+      </button>
+  
+      <button mat-raised-button color="primary" (click)="openDialogWithdraw()">
+        Withdraw Funds
+      </button>
+    </div>
+  </mat-card>
+
+</div>
+
+

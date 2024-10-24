@@ -1,0 +1,117 @@
+{
+  "quotes": [
+    {
+      "ticker": "FB",
+      "lastPrice": 319.48,
+      "bidPrice": 0,
+      "bidSize": 13,
+      "askPrice": 13,
+      "askSize": 400,
+      "id": "1c37"
+    },
+    {
+      "ticker": "AAPL",
+      "lastPrice": 500.23,
+      "bidPrice": 0,
+      "bidSize": 18,
+      "askPrice": 18,
+      "askSize": 100,
+      "id": "67d9"
+    },
+    {
+      "ticker": "MSFT",
+      "lastPrice": 100.53,
+      "bidPrice": 0,
+      "bidSize": 25,
+      "askPrice": 25,
+      "askSize": 200,
+      "id": "cd28"
+    },
+    {
+      "ticker": "GOOGL",
+      "lastPrice": 500.99,
+      "bidPrice": 0,
+      "bidSize": 30,
+      "askPrice": 10,
+      "askSize": 400,
+      "id": "a70e"
+    },
+    {
+      "ticker": "AMZN",
+      "lastPrice": 85.5,
+      "bidPrice": 0,
+      "bidSize": 16,
+      "askPrice": 16,
+      "askSize": 150,
+      "id": "7ef8"
+    }
+  ],
+  "traders": [
+    {
+      "key": "4",
+      "id": "4",
+      "firstName": "Robert",
+      "lastName": "Howard",
+      "dob": "1990-01-01",
+      "country": "Switzerland",
+      "email": "robert@test.com",
+      "actions": "<button (click)='deleteTrader'>Delete Trader</button>",
+      "amount": 0
+    },
+    {
+      "key": "5",
+      "id": "5",
+      "firstName": "Dustin",
+      "lastName": "Wise",
+      "dob": "1990-01-01",
+      "country": "Russia",
+      "email": "dustin@test.com",
+      "actions": "<button (click)='deleteTrader'>Delete Trader</button>",
+      "amount": 0
+    },
+    {
+      "key": "6",
+      "id": "6",
+      "firstName": "Sergio",
+      "lastName": "Chung",
+      "dob": "1990-01-01",
+      "country": "China",
+      "email": "sergio@test.com",
+      "actions": "<button (click)='deleteTrader'>Delete Trader</button>",
+      "amount": 0
+    },
+    {
+      "key": "7",
+      "id": "7",
+      "firstName": "Magnolia",
+      "lastName": "Cortez",
+      "dob": "1990-01-01",
+      "country": "Malaysia",
+      "email": "magnolia@test.com",
+      "actions": "<button (click)='deleteTrader'>Delete Trader</button>",
+      "amount": 0
+    },
+    {
+      "key": "8",
+      "id": "8",
+      "firstName": "Jeremy",
+      "lastName": "Alvarez",
+      "dob": "1990-01-01",
+      "country": "Mexico",
+      "email": "jeremy@test.com",
+      "actions": "<button (click)='deleteTrader'>Delete Trader</button>",
+      "amount": 0
+    },
+    {
+      "key": "9",
+      "id": "9",
+      "firstName": "Valerie",
+      "lastName": "Lee",
+      "dob": "1990-01-01",
+      "country": "Turkey",
+      "email": "valerie@test.com",
+      "actions": "<button (click)='deleteTrader'>Delete Trader</button>",
+      "amount": 0
+    }
+  ]
+}

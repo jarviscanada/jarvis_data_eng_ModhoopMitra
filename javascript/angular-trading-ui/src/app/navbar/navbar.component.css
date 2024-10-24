@@ -1,0 +1,12 @@
+.nav-body {
+  display: flex;
+  flex-direction: column;
+  
+  padding-top: 10px;
+  align-items: center;
+}
+
+.nav-item {
+  justify-content: center;
+
+}

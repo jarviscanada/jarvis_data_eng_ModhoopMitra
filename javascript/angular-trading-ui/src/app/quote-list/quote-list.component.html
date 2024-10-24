@@ -1,0 +1,40 @@
+<div>
+  <h2> Quotes </h2>
+</div>
+
+<div>
+  <table mat-table [dataSource]="quotes" class="table-container mat-elevation-z8">
+    <ng-container matColumnDef="Ticker">
+      <th mat-header-cell *matHeaderCellDef> Ticker </th>
+      <td mat-cell *matCellDef="let quote"> {{ quote.ticker }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Last Price">
+      <th mat-header-cell *matHeaderCellDef> Last Price </th>
+      <td mat-cell *matCellDef="let quote"> {{ quote.lastPrice }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Bid Price">
+      <th mat-header-cell *matHeaderCellDef> Bid Price </th>
+      <td mat-cell *matCellDef="let quote"> {{ quote.bidPrice }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Bid Size">
+      <th mat-header-cell *matHeaderCellDef> Bid Size </th>
+      <td mat-cell *matCellDef="let quote"> {{ quote.bidSize }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Ask Price">
+      <th mat-header-cell *matHeaderCellDef> Ask Price </th>
+      <td mat-cell *matCellDef="let quote"> {{ quote.askPrice }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="Ask Size">
+      <th mat-header-cell *matHeaderCellDef> Ask Size </th>
+      <td mat-cell *matCellDef="let quote"> {{ quote.askSize }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns"></tr>
+  </table>
+</div>

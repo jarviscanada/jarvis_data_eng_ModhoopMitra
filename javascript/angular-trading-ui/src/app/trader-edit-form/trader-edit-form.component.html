@@ -1,0 +1,24 @@
+<div>
+  <mat-dialog-content>
+    <p>First Name:</p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.firstName"/>
+    </mat-form-field>
+    
+    <p>Last Name:</p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.lastName"/>
+    </mat-form-field>
+    
+    <p>Email:</p>
+    <mat-form-field>
+      <input matInput [(ngModel)]="data.email"/>
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button mat-raised-button (click)="closeDialog()" >Cancel</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="data">Confirm</button>
+  </mat-dialog-actions>
+
+</div>

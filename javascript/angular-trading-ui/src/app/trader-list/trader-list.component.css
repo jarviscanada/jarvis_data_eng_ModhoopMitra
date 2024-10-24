@@ -1,0 +1,35 @@
+.table-container {
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Align button to the right */
+  margin: 16px; /* Add some margin around the container */
+}
+
+.add-trader-button {
+  display: flex; /* Use flexbox for the button */
+  align-items: center; /* Center items vertically */
+  font-size: 16px; /* Increase font size */
+  padding: 5px 10px; /* Add padding */
+}
+
+.add-trader-button mat-icon {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.actions-button {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  width: auto;
+  align-items: left;
+  justify-content: left;
+}
