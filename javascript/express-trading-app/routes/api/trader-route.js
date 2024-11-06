@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
 router.delete('/:traderId', async (req, res) => {
   try {
     const trader = await sequelize.query(
-      'SELECT * FROM Trader WHERE id = :traderId',
+      'SELECT * FROM trader WHERE id = :traderId',
       {
         replacements: {traderId: req.params.traderId},
         type: sequelize.QueryTypes.SELECT
@@ -43,7 +43,7 @@ router.delete('/:traderId', async (req, res) => {
     }
 
     await sequelize.query(
-      'DELETE FROM Trader WHERE id = :traderId',
+      'DELETE FROM trader WHERE id = :traderId',
       {
         replacements: {traderId: req.params.traderId},
         type: sequelize.QueryTypes.DELETE
