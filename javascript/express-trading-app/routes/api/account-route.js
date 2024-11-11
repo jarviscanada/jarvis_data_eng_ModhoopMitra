@@ -20,7 +20,7 @@ router.get('/transactionHistory/:traderId', (req, res)  => {
 // returns the specified traders account balance 
 router.get('/accountBalance/:traderId', (req, res) => {
   sequelize.query(
-    'SELECT * FROM Transactions WHERE trader_id = :traderId',
+    'SELECT * FROM transactions WHERE trader_id = :traderId',
     {
       replacements: {traderId: req.params.traderId},
       type: sequelize.QueryTypes.SELECT

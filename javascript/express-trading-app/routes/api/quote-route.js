@@ -19,7 +19,7 @@ router.get('/dailyList', (req, res)  => {
 // return the quote if it exists
 router.get('/:quoteId', (req, res) => {
   sequelize.query(
-    'SELECT * FROM Quote WHERE ticker = :quoteId', // : is required
+    'SELECT * FROM quote WHERE ticker = :quoteId', // : is required
     {
       replacements: { quoteId: req.params.quoteId},
       type: sequelize.QueryTypes.SELECT
