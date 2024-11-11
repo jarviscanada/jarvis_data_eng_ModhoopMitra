@@ -34,7 +34,7 @@ spec:
         tier: app-server
     spec:
       containers:
-      - image: mm444/express-trading-app
+      - image: mm444/express-trading-app-arm #image to run on ARM based system
         resources:
           limits:
             memory: "128Mi"
