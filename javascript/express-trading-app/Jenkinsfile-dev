@@ -40,7 +40,7 @@ pipeline {
                 //show cluster info for debugging purposes
                 sh 'kubectl cluster-info'
                 //Deploy the new image
-                sh 'kubectl set image ${DEPLOYMENT_NAME} springboot-demo-app=${DOCKER_REPO}/${IMAGE_NAME}'
+                sh 'kubectl set image ${DEPLOYMENT_NAME} express-trading-app=${DOCKER_REPO}/${IMAGE_NAME}'
                 //Check result
                 sh 'kubectl get all'
             }
