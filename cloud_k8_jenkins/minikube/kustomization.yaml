@@ -1,0 +1,7 @@
+secretGenerator:
+- name: mysql-pass
+  literals:
+  - password=rocky1234
+resources:
+  - mysql-deployment.yaml
+  - trading-deployment.yaml
