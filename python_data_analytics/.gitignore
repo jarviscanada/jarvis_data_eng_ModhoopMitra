@@ -1,0 +1,8 @@
+.config
+.ipynb_checkpoints
+.ipython
+.jupyter
+.local
+.npm
+.cache
+.bash_*
