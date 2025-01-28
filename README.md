@@ -6,11 +6,7 @@ I am a Software Developer with one year of experience and an Honours Bachelor of
 
 **Proficient:** Java, Javascript, Node/Express, Angular, Linux/Bash, RDBMS/SQL, Docker, Agile/Scrum, Git
 
-<<<<<<< HEAD
-**Competent:** JavaScript, C#, Django, React, Angular, ASP.NET
-=======
 **Competent:** Python, C#, Django, React, ASP.NET, Postman
->>>>>>> feature/profile
 
 **Familiar:** R, C, NumPy/Pandas, Azure AKS, Kubernetes, Jenkins, MongoDB/NoSQL, Google Cloud Platform, Bootstrap
 
@@ -26,9 +22,6 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_ModhoopMit
   - JDBC App: Implemented a Java Stock Quote command-line application that allows users to simulate a personal stock wallet. Integrated an external API into the application to fetch real-time stock data, ensuring up-to-date information. Technologies utilized in this project include JDBC for database interactions, PostgreSQL for the database management system, Maven for application dependency management and project building, and Docker for containerization and distribution. The application was thoroughly tested using JUnit and Mockito through various unit and integration tests.
   - Grep App: Implemented a Java grep application that emulates the Linux 'grep' CLI command, enabling users to search files for matching regular expression input. Created with Core Java and Maven, the application captures efficient use of functional programming through Java 8 Lambda Expressions and Stream APIs. SLF4J was employed for logging and the program was manually tested and debugged with IntelliJ. Finally, the application was Dockerized to allow for easy deployment and consistent execution across different environments.
 
-<<<<<<< HEAD
-**Angular Trading App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_ModhoopMitra/tree/master/javascript/angular-trading-ui)]: Developed a dynamic frontend application using TypeScript and Angular, designed to interface seamlessly with a Spring Boot backend for trading data. Implemented key features including a comprehensive dashboard for viewing and managing traders, a daily quotes list, and detailed trader profiles with functionalities for creating new traders, adding quotes, and managing account funds. The application was containerized using Docker for streamlined deployment and source code was managed through GitHub. Unit tests were conducted to ensure the reliability and accuracy of the application's features, covering various aspects such as component interactions, service logic, and data integrity.
-=======
 **Javascript Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_ModhoopMitra/tree/master/javascript)]:
       
   - Angular Trading App: Developed a dynamic frontend application using TypeScript and Angular, designed to interface seamlessly with a Spring Boot backend for trading data. Implemented key features including a comprehensive dashboard for viewing and managing traders, a daily quotes list, and detailed trader profiles with functionalities for creating new traders, adding quotes, and managing account funds. The application was containerized using Docker for streamlined deployment and source code was managed through GitHub. Unit tests were conducted to ensure the reliability and accuracy of the application's features, covering various aspects such as component interactions, service logic, and data integrity.
@@ -37,7 +30,6 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_ModhoopMit
 **Cloud/DevOps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_ModhoopMitra/tree/master/cloud_k8s_jenkins)]: Developed a PoC project to migrate on-premise servers to Microsoft Azure, deploying a trading data microservice using Azure Cloud Services such as VMs, Load Balancers, and Kubernetes. Designed a scalable and secure architecture with Azure AKS for auto-scaling, load balancing, and high availability, while integrating Azure Container Registry for efficient Docker image management. Additionally, implemented a CI/CD pipeline using Jenkins to automate the software development lifecycle, streamlining deployment processes and enhancing delivery speed.
 
 **Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_ModhoopMitra/tree/master/python_data_analytics)]: Led a PoC analytics project to assist a client in examining customer shopping behavior to improve marketing strategies and drive revenue growth. Uncovered insights that enabled the client's marketing team to create targeted campaigns, such as personalized promotions, email marketing, and events, for both new and existing customers. The analytics were performed using Python, Jupyter Notebook, and Pandas for data manipulation and analysis, with NumPy used for numerical computations.
->>>>>>> feature/profile
 
 
 ## Highlighted Projects
