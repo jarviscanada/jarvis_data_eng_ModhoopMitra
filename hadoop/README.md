@@ -24,7 +24,7 @@ Notebook to interact with data stored in the Hadoop system.
 4. YARN schedules and runs the job, reading/writing data to HDFS.
 
 ### Diagram
-![architecture](architecture.png)
+![architecture](resources/architecture.png)
 
 ### Hardware Specifications
 ```
@@ -41,7 +41,7 @@ Secondary worker nodes: 0
 ```
 
 # Hive Project
-![Notebook](zeppelin-notebook.png)
+![Notebook](resources/zeppelin-notebook.png)
 
 # Improvements
 1. Implement auto-scaling (e.g., YARN with Kubernetes) to reduce resource costs.
