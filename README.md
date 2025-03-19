@@ -4,11 +4,11 @@ I am a Software Developer with one year of experience and an Honours Bachelor of
 
 ## Skills
 
-**Proficient:** Java, Javascript, Node/Express, Angular, Linux/Bash, RDBMS/SQL, Docker, Agile/Scrum, Git
+**Proficient:** Java, Linux/Bash, RDBMS/SQL, Docker, Hadoop, Spark, Databricks, Agile/Scrum, Git
 
-**Competent:** Python, C#, Django, React, ASP.NET, Postman
+**Competent:** Javascript, Node/Express, Angular, Python, C#, Django, React, ASP.NET, Postman
 
-**Familiar:** R, C, NumPy/Pandas, Azure AKS, Kubernetes, Jenkins, MongoDB/NoSQL, Google Cloud Platform, Bootstrap
+**Familiar:** R, C, NumPy/Pandas, Azure AKS, Kubernetes, Jenkins, Google Cloud Platform, Bootstrap
 
 ## Jarvis Projects
 
@@ -31,6 +31,10 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_ModhoopMit
 
 **Python Data Analytics** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_ModhoopMitra/tree/master/python_data_analytics)]: Led a PoC analytics project to assist a client in examining customer shopping behavior to improve marketing strategies and drive revenue growth. Uncovered insights that enabled the client's marketing team to create targeted campaigns, such as personalized promotions, email marketing, and events, for both new and existing customers. The analytics were performed using Python, Jupyter Notebook, and Pandas for data manipulation and analysis, with NumPy used for numerical computations.
 
+**Hadoop** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_ModhoopMitra/tree/master/hadoop)]: Designed and implemented a Hadoop-based data processing pipeline to help Data Analytics team transition from SAP and R. Provisioned and configured a Hadoop cluster on GCP using HDFS, YARN, and MapReduce for distributed storage and processing. Developed optimized HiveQL queries to analyze the World Development Indicators (WDI) dataset, focusing on data cleaning and GDP trend analysis. Utilized Apache Zeppelin for interactive data exploration and visualization while ensuring pipeline efficiency by thoroughly testing and validating HiveQL queries.
+
+**Spark** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_ModhoopMitra/tree/master/spark)]: Implemented a data analytics solution for a client marketing team by leveraging Apache Spark (PySpark) for distributed data processing, enabling the handling of large customer transaction datasets. Evaluated two Spark environments, Zeppelin (on Hadoop) and Databricks (on AWS), to assess their scalability and efficiency in big data processing. Utilized Databricks Delta Lake and HDFS for Zeppelin, with Hive Metastore managing schema and table structures. Processed and analyzed customer transaction data and retention statistics, providing valuable insights that improved marketing campaign targeting, while using structured APIs for efficient querying of large datasets.
+
 
 ## Highlighted Projects
 **Web app for restaurants (Restify)** [[GitHub](https://github.com/mm-3/rest-ify)]: Developed a full-stack social media web application tailored for restaurant-related interactions, creating a robust platform for users to engage with restaurant profiles, blogs, feeds, and more. Utilized Django on the backend to build and extend models for user and restaurant profiles, blogs, and other features, and used SQLite as the database to store and manage data efficiently. To ensure scalability and flexibility, a REST API was implemented using the Django REST Framework. The frontend was developed using React, providing a dynamic and interactive user interface. React components interacted seamlessly with the Django backend through the REST API to fetch and update data. Bootstrap was employed for styling, ensuring a responsive and visually appealing design across various devices.
@@ -40,7 +44,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_ModhoopMit
 
 ## Professional Experiences
 
-**Technical Consultant, Jarvis (2024-present)**: Utilized an Agile/Scrum framework while developing applications, leveraging Linux/bash, SQL, Git, Java, and Docker to deliver high-quality software solutions. Participated in regular sprint planning, daily stand-ups, and retrospective meetings to ensure iterative progress and effective collaboration. Developed Java-based applications, managed SQL databases, and optimized server performance using Linux/bash. Streamlined the deployment processes with Docker, enhancing system efficiency and reliability. Additionally, ensured version control and collaborative development using Git, facilitating CI/CD.
+**Technical Consultant, Jarvis (2024-present)**: Worked within an Agile/Scrum framework to develop and deliver high-quality software solutions, utilizing tools like Linux/bash, SQL, Git, Java, and Docker. Participated in sprint planning, daily stand-ups, and retrospectives to ensure iterative progress and effective collaboration. Developed Java-based applications, managed SQL databases, and optimized performance using Linux/bash. Streamlined deployment processes with Docker for enhanced system efficiency and reliability, while using Git for version control and supporting CI/CD workflows. Additionally, worked with big data technologies such as Apache Spark, Zeppelin, and Databricks, handling large datasets and ensuring scalable data processing solutions.
 
 **Jr. Software Engineer, Fluid Mobility Inc. (2023-2024)**: Contributed to backend development by implementing a secure authentication solution for internal clients using ASP.NET Core Identity. Developed and documented API endpoints for login, registration, and token refresh, and worked closely with frontend developers to test and debug integration points, which reduced development time by 20%. Created comprehensive documentation on EMM best practices, including guides for device management, user registration, and troubleshooting, which reduced internal support ticket volumes by 40%.
 
