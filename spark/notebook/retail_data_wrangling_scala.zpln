@@ -1,0 +1,1217 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%md\n# Retail Data Wrangling and Analytics",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-26T16:37:32+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        }
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Retail Data Wrangling and Analytics</h1>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742912266245_1792236059",
+      "id": "paragraph_1742912266245_1792236059",
+      "dateCreated": "2025-03-25T14:17:46+0000",
+      "dateStarted": "2025-03-25T14:19:39+0000",
+      "dateFinished": "2025-03-25T14:19:42+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:24957"
+    },
+    {
+      "text": "%md\r\n## Load CSV into Dataframe\r\nAlternatively, the LGS IT team also dumped the transactional data into a [CSV file](https://raw.githubusercontent.com/jarviscanada/jarvis_data_eng_demo/feature/data/python_data_wrangling/data/online_retail_II.csv). However, the CSV header (column names) doesn't follow the snakecase or camelcase naming convention (e.g. `Customer ID` instead of `customer_id` or `CustomerID`). As a result, you will need to use Pandas to clean up the data before doing any analytics. In addition, unlike the PSQL scheme, CSV files do not have data types associated. Therefore, you will need to cast/convert certain columns into correct data types (e.g. DateTime, numbers, etc..)\r\n\r\n**Data Preperation**\r\n\r\n- Read the `data/online_retail_II.csv` file into a DataFrame\r\n- Rename all columns to upper camelcase or snakecase\r\n- Convert/cast all columns to the appropriate data types (e.g. datetime)",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-25T14:35:48+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Load CSV into Dataframe</h1>\n<p>Alternatively, the LGS IT team also dumped the transactional data into a <a href=\"https://raw.githubusercontent.com/jarviscanada/jarvis_data_eng_demo/feature/data/python_data_wrangling/data/online_retail_II.csv\">CSV file</a>. However, the CSV header (column names) doesn&rsquo;t follow the snakecase or camelcase naming convention (e.g. <code>Customer ID</code> instead of <code>customer_id</code> or <code>CustomerID</code>). As a result, you will need to use Pandas to clean up the data before doing any analytics. In addition, unlike the PSQL scheme, CSV files do not have data types associated. Therefore, you will need to cast/convert certain columns into correct data types (e.g. DateTime, numbers, etc..)</p>\n<p><strong>Data Preperation</strong></p>\n<ul>\n<li>Read the <code>data/online_retail_II.csv</code> file into a DataFrame</li>\n<li>Rename all columns to upper camelcase or snakecase</li>\n<li>Convert/cast all columns to the appropriate data types (e.g. datetime)</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742912334043_1476062946",
+      "id": "paragraph_1742912334043_1476062946",
+      "dateCreated": "2025-03-25T14:18:54+0000",
+      "dateStarted": "2025-03-25T14:19:41+0000",
+      "dateFinished": "2025-03-25T14:19:42+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24958"
+    },
+    {
+      "text": "%sh\n#wget -O \"https://raw.githubusercontent.com/jarviscanada/jarvis_data_eng_demo/feature/data/python_data_wrangling/data/online_retail_II.csv\"\n#hdfs fs -put online_retail_II.csv /user/zeppelin/\n#rm online_retail_II.csv",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-25T14:50:09+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sh",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sh",
+        "fontSize": 9,
+        "editorHide": false,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "bash: line 3: cd: /user/modhoop00: No such file or directory\nnotebook\nonline_retail_II.csv\nwdi_csv_parquet\nwdi_csv_text\nwdi_opencsv_text\nwdi_opencsv_text_partitions\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913420837_807631980",
+      "id": "paragraph_1742913420837_807631980",
+      "dateCreated": "2025-03-25T14:37:00+0000",
+      "dateStarted": "2025-03-25T14:45:53+0000",
+      "dateFinished": "2025-03-25T14:45:53+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24959"
+    },
+    {
+      "text": "%spark\nimport org.apache.spark.sql.types.{FloatType, IntegerType}\nimport java.sql.Date\nimport org.apache.spark.sql.functions.to_date\n\nval retail_df = spark.read.option(\"header\", \"true\").csv(\"hdfs:///user/zeppelin/online_retail_II.csv\")\n    .withColumn(\"invoice\", $\"Invoice\")\n    .withColumn(\"stockcode\", $\"StockCode\")\n    .withColumn(\"description\", $\"Description\")\n    .withColumn(\"quantity\", $\"Quantity\".cast(IntegerType))\n    .withColumn(\"invoicedate\", to_date($\"InvoiceDate\"))\n    .withColumn(\"price\", $\"Price\".cast(FloatType))\n    .withColumn(\"customer id\", $\"Customer ID\".cast(IntegerType)).withColumnRenamed(\"customer id\", \"customerid\")\n    .withColumn(\"country\", $\"Country\")\n//retail_df.show()\n\ncase class Transaction(invoice: String, stockcode: String, description: String, quantity: Integer, invoicedate: Date, price: Float, customerid: Integer, country: String)\n\nval retail_ds = retail_df.as[Transaction]\nval retail_ds_c = retail_ds.cache()\nretail_ds_c.show()\nretail_ds_c.printSchema()",
+      "user": "anonymous",
+      "dateUpdated": "2025-04-01T16:45:00+0000",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------+---------+--------------------+--------+-----------+-----+----------+--------------+\n|invoice|stockcode|         description|quantity|invoicedate|price|customerid|       country|\n+-------+---------+--------------------+--------+-----------+-----+----------+--------------+\n| 489434|    85048|15CM CHRISTMAS GL...|      12| 2009-12-01| 6.95|     13085|United Kingdom|\n| 489434|   79323P|  PINK CHERRY LIGHTS|      12| 2009-12-01| 6.75|     13085|United Kingdom|\n| 489434|   79323W| WHITE CHERRY LIGHTS|      12| 2009-12-01| 6.75|     13085|United Kingdom|\n| 489434|    22041|\"RECORD FRAME 7\"\"...|      48| 2009-12-01|  2.1|     13085|United Kingdom|\n| 489434|    21232|STRAWBERRY CERAMI...|      24| 2009-12-01| 1.25|     13085|United Kingdom|\n| 489434|    22064|PINK DOUGHNUT TRI...|      24| 2009-12-01| 1.65|     13085|United Kingdom|\n| 489434|    21871| SAVE THE PLANET MUG|      24| 2009-12-01| 1.25|     13085|United Kingdom|\n| 489434|    21523|FANCY FONT HOME S...|      10| 2009-12-01| 5.95|     13085|United Kingdom|\n| 489435|    22350|           CAT BOWL |      12| 2009-12-01| 2.55|     13085|United Kingdom|\n| 489435|    22349|DOG BOWL , CHASIN...|      12| 2009-12-01| 3.75|     13085|United Kingdom|\n| 489435|    22195|HEART MEASURING S...|      24| 2009-12-01| 1.65|     13085|United Kingdom|\n| 489435|    22353|LUNCHBOX WITH CUT...|      12| 2009-12-01| 2.55|     13085|United Kingdom|\n| 489436|   48173C|DOOR MAT BLACK FL...|      10| 2009-12-01| 5.95|     13078|United Kingdom|\n| 489436|    21755|LOVE BUILDING BLO...|      18| 2009-12-01| 5.45|     13078|United Kingdom|\n| 489436|    21754|HOME BUILDING BLO...|       3| 2009-12-01| 5.95|     13078|United Kingdom|\n| 489436|    84879|ASSORTED COLOUR B...|      16| 2009-12-01| 1.69|     13078|United Kingdom|\n| 489436|    22119| PEACE WOODEN BLO...|       3| 2009-12-01| 6.95|     13078|United Kingdom|\n| 489436|    22142|CHRISTMAS CRAFT W...|      12| 2009-12-01| 1.45|     13078|United Kingdom|\n| 489436|    22296|HEART IVORY TRELL...|      12| 2009-12-01| 1.65|     13078|United Kingdom|\n| 489436|    22295|HEART FILIGREE DO...|      12| 2009-12-01| 1.65|     13078|United Kingdom|\n+-------+---------+--------------------+--------+-----------+-----+----------+--------------+\nonly showing top 20 rows\n\nroot\n |-- invoice: string (nullable = true)\n |-- stockcode: string (nullable = true)\n |-- description: string (nullable = true)\n |-- quantity: integer (nullable = true)\n |-- invoicedate: date (nullable = true)\n |-- price: float (nullable = true)\n |-- customerid: integer (nullable = true)\n |-- country: string (nullable = true)\n\nimport org.apache.spark.sql.types.{FloatType, IntegerType}\nimport java.sql.Date\n\u001b[1m\u001b[34mretail_df\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [invoice: string, stockcode: string ... 6 more fields]\ndefined class Transaction\n\u001b[1m\u001b[34mretail_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[Transaction]\u001b[0m = [invoice: string, stockcode: string ... 6 more fields]\n\u001b[1m\u001b[34mretail_ds_c\u001b[0m: \u001b[1m\u001b[32mretail_ds.type\u001b[0m = [invoice: string, stockcode: string ... 6 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=0",
+              "$$hashKey": "object:30229"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=1",
+              "$$hashKey": "object:30230"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=2",
+              "$$hashKey": "object:30231"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742914123121_1330252844",
+      "id": "paragraph_1742914123121_1330252844",
+      "dateCreated": "2025-03-25T14:48:43+0000",
+      "dateStarted": "2025-04-01T14:44:42+0000",
+      "dateFinished": "2025-04-01T14:44:58+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24960"
+    },
+    {
+      "text": "%md\n## Total Invoice Amount Distribution",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-25T16:01:31+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Total Invoice Amount Distribution</h2>\n<p>val total_invoice_ds = retail_ds_c.groupBy($&ldquo;invoice&rdquo;).count()<br />\ntotal_invoice_ds.show()</p>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742912379258_1773898690",
+      "id": "paragraph_1742912379258_1773898690",
+      "dateCreated": "2025-03-25T14:19:39+0000",
+      "dateStarted": "2025-03-25T16:01:21+0000",
+      "dateFinished": "2025-03-25T16:01:21+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24961"
+    },
+    {
+      "text": "%spark\n\nimport org.apache.spark.sql.{Dataset, Row}\n\nval total_invoice_ds = retail_ds_c.withColumn(\"amount\", $\"quantity\" * $\"price\").filter($\"amount\" > 0).groupBy($\"invoice\").agg(\"amount\" -> \"sum\").withColumnRenamed(\"sum(amount)\", \"totalamount\")\n//total_invoice_ds.show()\n\nval show_distribution = (ds: Dataset[Row]) => {\n    val min = ds.agg(\"totalamount\" -> \"min\").collect()(0)(0).asInstanceOf[Double]\n    val mean = ds.agg(\"totalamount\" -> \"mean\").collect()(0)(0).asInstanceOf[Double]\n    val median = ds.agg(\"totalamount\" -> \"median\").collect()(0)(0).asInstanceOf[Double]\n    val mode = ds.agg(\"totalamount\" -> \"mode\").collect()(0)(0).asInstanceOf[Double]\n    val max = ds.agg(\"totalamount\" -> \"max\").collect()(0)(0).asInstanceOf[Double]\n    Console.printf(\"%nMin: %.2f%n Mean: %.2f%n Median: %.2f%n Mode: %.2f%n Max: %.2f%n\", min, mean, median, mode, max)\n}\n\nshow_distribution(total_invoice_ds)\n\n\nval eightyfifth_quantile_val = total_invoice_ds.stat.approxQuantile(\"totalamount\", Array(0.85), 0.001)(0)\nval filtered_invoice_ds = total_invoice_ds.filter($\"totalamount\" < eightyfifth_quantile_val)\n//filtered_invoice_ds.show()\n\nshow_distribution(filtered_invoice_ds)",
+      "user": "anonymous",
+      "dateUpdated": "2025-04-01T14:44:48+0000",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\nMin: 0.19\n Mean: 523.30\n Median: 304.31\n Mode: 15.00\n Max: 168469.59\n\nMin: 0.19\n Mean: 271.27\n Median: 255.96\n Mode: 15.00\n Max: 721.06\nimport org.apache.spark.sql.{Dataset, Row}\n\u001b[1m\u001b[34mtotal_invoice_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [invoice: string, totalamount: double]\n\u001b[1m\u001b[34mshow_distribution\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row] => Unit\u001b[0m = $Lambda$5410/0x0000000102034840@7d23c33e\n\u001b[1m\u001b[34meightyfifth_quantile_val\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 721.2800035476685\n\u001b[1m\u001b[34mfiltered_invoice_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [invoice: string, totalamount: double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=3",
+              "$$hashKey": "object:25871"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=4",
+              "$$hashKey": "object:25872"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=5",
+              "$$hashKey": "object:25873"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=6",
+              "$$hashKey": "object:25874"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=7",
+              "$$hashKey": "object:25875"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=8",
+              "$$hashKey": "object:25876"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=9",
+              "$$hashKey": "object:25877"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=10",
+              "$$hashKey": "object:25878"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=11",
+              "$$hashKey": "object:25879"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=12",
+              "$$hashKey": "object:25880"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=13",
+              "$$hashKey": "object:25881"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=14",
+              "$$hashKey": "object:25882"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=15",
+              "$$hashKey": "object:25883"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=16",
+              "$$hashKey": "object:25884"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=17",
+              "$$hashKey": "object:25885"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=18",
+              "$$hashKey": "object:25886"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=19",
+              "$$hashKey": "object:25887"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=20",
+              "$$hashKey": "object:25888"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=21",
+              "$$hashKey": "object:25889"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=22",
+              "$$hashKey": "object:25890"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=23",
+              "$$hashKey": "object:25891"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=24",
+              "$$hashKey": "object:25892"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=25",
+              "$$hashKey": "object:25893"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=26",
+              "$$hashKey": "object:25894"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=27",
+              "$$hashKey": "object:25895"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=28",
+              "$$hashKey": "object:25896"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=29",
+              "$$hashKey": "object:25897"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=30",
+              "$$hashKey": "object:25898"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=31",
+              "$$hashKey": "object:25899"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=32",
+              "$$hashKey": "object:25900"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=33",
+              "$$hashKey": "object:25901"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=34",
+              "$$hashKey": "object:25902"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913395705_1311830199",
+      "id": "paragraph_1742913395705_1311830199",
+      "dateCreated": "2025-03-25T14:36:35+0000",
+      "dateStarted": "2025-04-01T14:44:48+0000",
+      "dateFinished": "2025-04-01T14:45:11+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24962"
+    },
+    {
+      "text": "%md\n## Monthly Placed and Canceled Orders",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-26T16:51:12+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Monthly Placed and Canceled Orders</h2>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913247679_6292134",
+      "id": "paragraph_1742913247679_6292134",
+      "dateCreated": "2025-03-25T14:34:07+0000",
+      "dateStarted": "2025-03-26T16:51:12+0000",
+      "dateFinished": "2025-03-26T16:51:12+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24963"
+    },
+    {
+      "text": "%spark\n\nimport org.apache.spark.sql.functions.lit\n\n\nval retail_month_ds = retail_ds_c.withColumn(\"month\", date_format($\"invoicedate\", \"yyyyMM\").cast(IntegerType))\n//retail_month_ds.show()\n\nval monthly_placed_ds = retail_month_ds.dropDuplicates(\"invoice\").groupBy(\"month\").agg(\"invoice\" -> \"count\").orderBy(\"month\").withColumnRenamed(\"count(invoice)\", \"totalorders\")\n//monthly_placed_ds.show()\n\nval monthly_cancelled_ds = retail_month_ds.dropDuplicates(\"invoice\").filter($\"invoice\".contains(\"C\")).groupBy(\"month\").agg(\"invoice\" -> \"count\").orderBy(\"month\").withColumnRenamed(\"count(invoice)\", \"cancelled\")\n//monthly_cancelled_ds.show()\n\nval monthly_orders_ds = monthly_placed_ds.join(monthly_cancelled_ds, \"month\").withColumn(\"placed\", $\"totalorders\" - (lit(2)*$\"cancelled\")).orderBy(\"month\")\nmonthly_orders_ds.show()",
+      "user": "anonymous",
+      "dateUpdated": "2025-04-01T14:44:55+0000",
+      "progress": 25,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+-----------+---------+------+\n| month|totalorders|cancelled|placed|\n+------+-----------+---------+------+\n|200912|       2330|      401|  1528|\n|201001|       1633|      300|  1033|\n|201002|       1969|      240|  1489|\n|201003|       2367|      407|  1553|\n|201004|       1892|      304|  1284|\n|201005|       2418|      407|  1604|\n|201006|       2216|      357|  1502|\n|201007|       2017|      344|  1329|\n|201008|       1877|      273|  1331|\n|201009|       2375|      371|  1633|\n|201010|       2965|      476|  2013|\n|201011|       3669|      576|  2517|\n|201012|       2025|      326|  1373|\n|201101|       1476|      260|   956|\n|201102|       1393|      219|   955|\n|201103|       1983|      318|  1347|\n|201104|       1744|      240|  1264|\n|201105|       2162|      314|  1534|\n|201106|       2012|      329|  1354|\n|201107|       1927|      270|  1387|\n+------+-----------+---------+------+\nonly showing top 20 rows\n\nimport org.apache.spark.sql.functions.lit\n\u001b[1m\u001b[34mretail_month_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [invoice: string, stockcode: string ... 7 more fields]\n\u001b[1m\u001b[34mmonthly_placed_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [month: int, totalorders: bigint]\n\u001b[1m\u001b[34mmonthly_cancelled_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [month: int, cancelled: bigint]\n\u001b[1m\u001b[34mmonthly_orders_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [month: int, totalorders: bigint ... 2 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=35",
+              "$$hashKey": "object:26132"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=36",
+              "$$hashKey": "object:26133"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=37",
+              "$$hashKey": "object:26134"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=38",
+              "$$hashKey": "object:26135"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=39",
+              "$$hashKey": "object:26136"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=40",
+              "$$hashKey": "object:26137"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913404952_1464415718",
+      "id": "paragraph_1742913404952_1464415718",
+      "dateCreated": "2025-03-25T14:36:44+0000",
+      "dateStarted": "2025-04-01T14:44:58+0000",
+      "dateFinished": "2025-04-01T14:45:14+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24964"
+    },
+    {
+      "text": "%md\n## Monthly Sales",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-26T17:35:05+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>Monthly Sales</h1>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913256256_409980184",
+      "id": "paragraph_1742913256256_409980184",
+      "dateCreated": "2025-03-25T14:34:16+0000",
+      "dateStarted": "2025-03-25T14:34:24+0000",
+      "dateFinished": "2025-03-25T14:34:24+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24965"
+    },
+    {
+      "text": "%spark\n\nval monthly_amount_ds = retail_month_ds.withColumn(\"totalamount\", $\"quantity\"*$\"price\")\n//monthly_amount_ds.show()\n\nval monthly_sales_ds = monthly_amount_ds.groupBy(\"month\").agg(\"totalamount\" -> \"sum\").orderBy(\"month\").withColumnRenamed(\"sum(totalamount)\", \"sales\")\nmonthly_sales_ds.show()",
+      "user": "anonymous",
+      "dateUpdated": "2025-04-01T14:44:58+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+------------------+\n| month|             sales|\n+------+------------------+\n|200912| 799847.1075055711|\n|201001| 624032.8896515106|\n|201002|  533091.424455221|\n|201003|  765848.757825097|\n|201004| 590580.4300854017|\n|201005| 615322.8286303803|\n|201006| 679786.6077747606|\n|201007| 575236.3596651554|\n|201008| 656776.3393343091|\n|201009| 853650.4293782803|\n|201010|1045168.3482284844|\n|201011|1422654.6372941246|\n|201012|1126445.4675593823|\n|201101|  560000.258079961|\n|201102| 498062.6492906958|\n|201103|  683267.079093039|\n|201104|493207.11913273286|\n|201105| 723333.5078510791|\n|201106| 691123.1178948507|\n|201107| 681300.1086762528|\n+------+------------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mmonthly_amount_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [invoice: string, stockcode: string ... 8 more fields]\n\u001b[1m\u001b[34mmonthly_sales_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [month: int, sales: double]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=41",
+              "$$hashKey": "object:26263"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=42",
+              "$$hashKey": "object:26264"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913393752_1465721188",
+      "id": "paragraph_1742913393752_1465721188",
+      "dateCreated": "2025-03-25T14:36:33+0000",
+      "dateStarted": "2025-04-01T14:45:11+0000",
+      "dateFinished": "2025-04-01T14:45:15+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24966"
+    },
+    {
+      "text": "%md\n## Monthly Sales Growth",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-26T17:49:22+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913264127_1801056281",
+      "id": "paragraph_1742913264127_1801056281",
+      "dateCreated": "2025-03-25T14:34:24+0000",
+      "status": "READY",
+      "$$hashKey": "object:24967"
+    },
+    {
+      "text": "%spark\n\nimport org.apache.spark.sql.functions.lag\nimport org.apache.spark.sql.expressions.Window\n\nval wndw = Window.orderBy(\"month\")\n\nval monthly_sales_growth_ds = monthly_sales_ds.withColumn(\"growth\", (($\"sales\" - lag($\"sales\", 1).over(wndw))/$\"sales\")*lit(100))\nmonthly_sales_growth_ds.show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-26T18:00:03+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+------------------+-------------------+\n| month|             sales|             growth|\n+------+------------------+-------------------+\n|200912| 799847.1075055711|               NULL|\n|201001| 624032.8896515106|-28.173870443310033|\n|201002|  533091.424455221| -17.05926245000562|\n|201003|  765848.757825097|  30.39207558824984|\n|201004| 590580.4300854017|-29.677300298343827|\n|201005| 615322.8286303803|  4.021043490301113|\n|201006| 679786.6077747606|   9.48294338357127|\n|201007| 575236.3596651554|-18.175180750129176|\n|201008| 656776.3393343091| 12.415182275262904|\n|201009| 853650.4293782803|  23.06261243110438|\n|201010|1045168.3482284844| 18.324121580491674|\n|201011|1422654.6372941246| 26.533937272619827|\n|201012|1126445.4675593823|-26.295917402599617|\n|201101|  560000.258079961| -101.1508836480822|\n|201102| 498062.6492906958| -12.43570640711006|\n|201103|  683267.079093039| 27.105715388509793|\n|201104|493207.11913273286| -38.53552647303878|\n|201105| 723333.5078510791| 31.814700441849986|\n|201106| 691123.1178948507| -4.660586387898691|\n|201107| 681300.1086762528|-1.4418035596212857|\n+------+------------------+-------------------+\nonly showing top 20 rows\n\nimport org.apache.spark.sql.functions.lag\nimport org.apache.spark.sql.expressions.Window\n\u001b[1m\u001b[34mwndw\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.expressions.WindowSpec\u001b[0m = org.apache.spark.sql.expressions.WindowSpec@2c58a96f\n\u001b[1m\u001b[34mmonthly_sales_growth_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [month: int, sales: double ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:44755/jobs/job?id=109",
+              "$$hashKey": "object:26368"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:44755/jobs/job?id=110",
+              "$$hashKey": "object:26369"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:44755/jobs/job?id=111",
+              "$$hashKey": "object:26370"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:44755/jobs/job?id=112",
+              "$$hashKey": "object:26371"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:44755/jobs/job?id=113",
+              "$$hashKey": "object:26372"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913387931_249717513",
+      "id": "paragraph_1742913387931_249717513",
+      "dateCreated": "2025-03-25T14:36:27+0000",
+      "dateStarted": "2025-03-26T18:00:03+0000",
+      "dateFinished": "2025-03-26T18:00:04+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24968"
+    },
+    {
+      "text": "%md\n## Monthly Active Users",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-25T14:35:34+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913274211_1677878897",
+      "id": "paragraph_1742913274211_1677878897",
+      "dateCreated": "2025-03-25T14:34:34+0000",
+      "status": "READY",
+      "$$hashKey": "object:24969"
+    },
+    {
+      "text": "%spark\n\nval monthly_active_ds = monthly_amount_ds.dropDuplicates(Array(\"month\", \"customerid\")).groupBy(\"month\").agg(\"customerid\" -> \"count\").withColumnRenamed(\"count(customerid)\", \"users\").orderBy(\"month\")\nmonthly_active_ds.show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-26T18:25:36+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+-----+\n| month|users|\n+------+-----+\n|200912| 1045|\n|201001|  786|\n|201002|  807|\n|201003| 1111|\n|201004|  998|\n|201005| 1062|\n|201006| 1095|\n|201007|  988|\n|201008|  964|\n|201009| 1202|\n|201010| 1577|\n|201011| 1683|\n|201012|  948|\n|201101|  783|\n|201102|  798|\n|201103| 1020|\n|201104|  899|\n|201105| 1079|\n|201106| 1051|\n|201107|  993|\n+------+-----+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mmonthly_active_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [month: int, users: bigint]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:44755/jobs/job?id=129",
+              "$$hashKey": "object:26488"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:44755/jobs/job?id=130",
+              "$$hashKey": "object:26489"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:44755/jobs/job?id=131",
+              "$$hashKey": "object:26490"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913380686_1963158949",
+      "id": "paragraph_1742913380686_1963158949",
+      "dateCreated": "2025-03-25T14:36:20+0000",
+      "dateStarted": "2025-03-26T18:25:37+0000",
+      "dateFinished": "2025-03-26T18:25:37+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24970"
+    },
+    {
+      "text": "%md\n# New and Existing Users",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-25T14:35:00+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h1>New and Existing Users</h1>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913283765_1453309813",
+      "id": "paragraph_1742913283765_1453309813",
+      "dateCreated": "2025-03-25T14:34:43+0000",
+      "dateStarted": "2025-03-25T14:35:01+0000",
+      "dateFinished": "2025-03-25T14:35:01+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24971"
+    },
+    {
+      "text": "%spark\n\nval first_month_ds = retail_month_ds.groupBy(\"customerid\").agg(\"month\" -> \"min\").withColumnRenamed(\"min(month)\", \"firstmonth\").orderBy(\"firstmonth\")\n//first_month_ds.show()\n\nval retail_first_month_ds = retail_month_ds.join(first_month_ds, \"customerid\")\n\nval new_user_ds = retail_first_month_ds.dropDuplicates(\"customerid\", \"month\").filter($\"firstmonth\" === $\"month\").groupBy(\"month\").agg(\"*\" -> \"count\").orderBy(\"month\").withColumnRenamed(\"count(1)\", \"newusers\")\nval ex_user_ds = retail_first_month_ds.dropDuplicates(\"customerid\", \"month\").filter($\"firstmonth\" =!= $\"month\").groupBy(\"month\").agg(\"*\" -> \"count\").orderBy(\"month\").withColumnRenamed(\"count(1)\", \"exusers\")\n//new_user_ds.show()\n//ex_user_ds.show()\n\nval new_ex_user_ds = new_user_ds.join(ex_user_ds, \"month\", \"left\").orderBy(\"month\")\nnew_ex_user_ds.show()",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-31T18:16:32+0000",
+      "progress": 33,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+--------+-------+\n| month|newusers|exusers|\n+------+--------+-------+\n|200912|    1045|   NULL|\n|201001|     394|    392|\n|201002|     363|    444|\n|201003|     436|    675|\n|201004|     291|    707|\n|201005|     254|    808|\n|201006|     269|    826|\n|201007|     183|    805|\n|201008|     158|    806|\n|201009|     242|    960|\n|201010|     379|   1198|\n|201011|     322|   1361|\n|201012|      77|    871|\n|201101|      71|    712|\n|201102|     123|    675|\n|201103|     178|    842|\n|201104|     105|    794|\n|201105|     108|    971|\n|201106|     108|    943|\n|201107|     102|    891|\n+------+--------+-------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mfirst_month_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [customerid: int, firstmonth: int]\n\u001b[1m\u001b[34mretail_first_month_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [customerid: int, invoice: string ... 8 more fields]\n\u001b[1m\u001b[34mnew_user_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [month: int, newusers: bigint]\n\u001b[1m\u001b[34mex_user_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [month: int, exusers: bigint]\n\u001b[1m\u001b[34mnew_ex_user_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [month: int, newusers: bigint ... 1 more field]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:45411/jobs/job?id=97",
+              "$$hashKey": "object:26604"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:45411/jobs/job?id=98",
+              "$$hashKey": "object:26605"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:45411/jobs/job?id=99",
+              "$$hashKey": "object:26606"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:45411/jobs/job?id=100",
+              "$$hashKey": "object:26607"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:45411/jobs/job?id=101",
+              "$$hashKey": "object:26608"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:45411/jobs/job?id=102",
+              "$$hashKey": "object:26609"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:45411/jobs/job?id=103",
+              "$$hashKey": "object:26610"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:45411/jobs/job?id=104",
+              "$$hashKey": "object:26611"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:45411/jobs/job?id=105",
+              "$$hashKey": "object:26612"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:45411/jobs/job?id=106",
+              "$$hashKey": "object:26613"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913366955_1496507367",
+      "id": "paragraph_1742913366955_1496507367",
+      "dateCreated": "2025-03-25T14:36:06+0000",
+      "dateStarted": "2025-03-31T18:16:32+0000",
+      "dateFinished": "2025-03-31T18:16:34+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24972"
+    },
+    {
+      "text": "%md\n## Finding RFM\n\nRFM is a method used for analyzing customer value. It is commonly used in database marketing and direct marketing and has received particular attention in the retail and professional services industries. ([wikipedia](https://en.wikipedia.org/wiki/RFM_(market_research)))\n\nRFM stands for three dimensions:\n\n- Recency – How recently did the customer purchase?\n\n- Frequency – How often do they purchase?\n\n- Monetary Value – How much do they spend?",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-25T14:35:20+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "results": {},
+        "enabled": true,
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "<div class=\"markdown-body\">\n<h2>Finding RFM</h2>\n<p>RFM is a method used for analyzing customer value. It is commonly used in database marketing and direct marketing and has received particular attention in the retail and professional services industries. (<a href=\"https://en.wikipedia.org/wiki/RFM_(market_research)\">wikipedia</a>)</p>\n<p>RFM stands for three dimensions:</p>\n<ul>\n<li>\n<p>Recency – How recently did the customer purchase?</p>\n</li>\n<li>\n<p>Frequency – How often do they purchase?</p>\n</li>\n<li>\n<p>Monetary Value – How much do they spend?</p>\n</li>\n</ul>\n\n</div>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913301022_1036902015",
+      "id": "paragraph_1742913301022_1036902015",
+      "dateCreated": "2025-03-25T14:35:01+0000",
+      "dateStarted": "2025-03-25T14:35:20+0000",
+      "dateFinished": "2025-03-25T14:35:20+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24973"
+    },
+    {
+      "text": "%spark\nimport org.apache.spark.sql.types.DateType\nimport org.apache.spark.sql.expressions.Window\n\nval filtered_ds = retail_ds_c.filter($\"quantity\" > 0 && $\"price\" > 0).withColumn(\"totalamount\", $\"price\"*$\"quantity\")\n\nval dateend = filtered_ds.select($\"invoicedate\").agg(max(\"invoicedate\")).head().getAs[java.sql.Date](0)\n\n// finding monetary and recency values\nval mon_rec_ds = filtered_ds.groupBy(\"customerid\").agg(sum(\"totalamount\").alias(\"monetary\"), datediff(lit(dateend), max(\"invoicedate\")).alias(\"recency\"))\n\n// finding frequency values\n//val freq_ds = filtered_ds.dropDuplicates(\"invoice\").groupBy(\"customerid\").agg(count(\"invoice\").alias(\"frequency\")).orderBy(\"customerid\")\nval frq_ds = filtered_ds.groupBy(\"customerid\", \"invoice\").agg(sum(\"totalamount\"))\nval freq_ds = frq_ds.groupBy(\"customerid\").agg(count(\"sum(totalamount)\").alias(\"frequency\"))\n\nval rfm_ds = mon_rec_ds.join(freq_ds, \"customerid\", \"inner\")\nrfm_ds.show()\n\n\n// generating rfm scores\nval wndw_r = Window.orderBy(\"recency\")\nval r_ds = rfm_ds.withColumn(\"recencyscore\", ntile(5).over(wndw_r))\n\nval wndw_f = Window.orderBy(\"frequency\")\nval f_ds = r_ds.withColumn(\"frequencyscore\", ntile(5).over(wndw_f))\n\nval wndw_m = Window.orderBy(\"monetary\")\nval m_ds = f_ds.withColumn(\"monetaryscore\", ntile(5).over(wndw_m))\n\nval rfm_score_ds = m_ds.withColumn(\"recencyscore\", lit(6) - $\"recencyscore\").orderBy(\"customerid\")\nrfm_score_ds.show()",
+      "user": "anonymous",
+      "dateUpdated": "2025-04-01T16:42:48+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----------+------------------+-------+---------+\n|customerid|          monetary|recency|frequency|\n+----------+------------------+-------+---------+\n|     16503| 3614.339973926544|    106|       11|\n|     15846|107.00999909639359|    385|        1|\n|     13289| 307.9499979019165|    723|        1|\n|     16339|109.94999814033508|    284|        1|\n|     14423| 916.6099720001221|    218|        3|\n|     18201| 447.5299963951111|    722|        1|\n|     12626| 6620.479982852936|     23|        9|\n|     17809|11337.389952242374|     16|       20|\n|     17783|379.90999841690063|     72|        3|\n|     17754| 4577.530014395714|      0|       13|\n|     17708| 887.9299967288971|    187|        4|\n|     14837|3460.3200392723083|     89|        9|\n|     16283| 4403.819986879826|      5|        8|\n|     16534| 635.9000021219254|    642|        1|\n|     13483|140.34000301361084|     65|        1|\n|     13508| 287.0499949455261|    243|        2|\n|     13916|1275.8099975585938|    463|        4|\n|     15575| 30.09999942779541|    619|        1|\n|     17223| 873.5299981832504|    310|        3|\n|     14944| 9784.669962406158|     29|       19|\n+----------+------------------+-------+---------+\nonly showing top 20 rows\n\n+----------+------------------+-------+---------+------------+--------------+-------------+\n|customerid|          monetary|recency|frequency|recencyscore|frequencyscore|monetaryscore|\n+----------+------------------+-------+---------+------------+--------------+-------------+\n|     12346|  77556.4537448883|    325|       12|           2|             5|            5|\n|     12347|5633.3200306892395|      2|        8|           5|             4|            5|\n|     12348|2019.4000129699707|     75|        5|           3|             4|            4|\n|     12349| 4428.689983844757|     18|        4|           5|             3|            5|\n|     12350|334.39999771118164|    310|        1|           2|             1|            2|\n|     12351| 300.9300022125244|    375|        1|           2|             1|            2|\n|     12352|  2849.83997631073|     36|       10|           4|             5|            4|\n|     12353|  406.760000705719|    204|        2|           2|             2|            2|\n|     12354| 1079.400016784668|    232|        1|           2|             1|            3|\n|     12355| 947.6099939346313|    214|        2|           2|             2|            3|\n|     12356|6373.6799656152725|     22|        6|           4|             4|            5|\n|     12357| 18287.65998649597|     33|        3|           4|             3|            5|\n|     12358| 3887.069887280464|      1|        5|           5|             4|            5|\n|     12359| 8935.939941883087|     57|       10|           4|             5|            5|\n|     12360|  4252.89001750946|     52|        8|           4|             4|            5|\n|     12361|511.25000381469727|    287|        4|           2|             4|            2|\n|     12362| 5356.230017900467|      3|       11|           5|             5|            5|\n|     12363| 552.0000133514404|    109|        2|           3|             2|            2|\n|     12364|1313.1000204086304|      7|        4|           5|             3|            4|\n|     12365| 641.3800096511841|    291|        2|           2|             2|            3|\n+----------+------------------+-------+---------+------------+--------------+-------------+\nonly showing top 20 rows\n\nimport org.apache.spark.sql.types.DateType\nimport org.apache.spark.sql.expressions.Window\n\u001b[1m\u001b[34mfiltered_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [invoice: string, stockcode: string ... 7 more fields]\n\u001b[1m\u001b[34mdateend\u001b[0m: \u001b[1m\u001b[32mjava.sql.Date\u001b[0m = 2011-12-09\n\u001b[1m\u001b[34mmon_rec_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [customerid: int, monetary: double ... 1 more field]\n\u001b[1m\u001b[34mfrq_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [customerid: int, invoice: string ... 1 more field]\n\u001b[1m\u001b[34mfreq_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [customerid: int, frequency: bigint]\n\u001b[1m\u001b[34mrfm_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [customerid: int, monetary: double ... 2 more fields]\n\u001b[1m\u001b[34mwndw_r\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sq...\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=342",
+              "$$hashKey": "object:29965"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=343",
+              "$$hashKey": "object:29966"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=344",
+              "$$hashKey": "object:29967"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=345",
+              "$$hashKey": "object:29968"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=346",
+              "$$hashKey": "object:29969"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=347",
+              "$$hashKey": "object:29970"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=348",
+              "$$hashKey": "object:29971"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=349",
+              "$$hashKey": "object:29972"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=350",
+              "$$hashKey": "object:29973"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=351",
+              "$$hashKey": "object:29974"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=352",
+              "$$hashKey": "object:29975"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=353",
+              "$$hashKey": "object:29976"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=354",
+              "$$hashKey": "object:29977"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1742913311279_1798104773",
+      "id": "paragraph_1742913311279_1798104773",
+      "dateCreated": "2025-03-25T14:35:11+0000",
+      "dateStarted": "2025-04-01T16:42:48+0000",
+      "dateFinished": "2025-04-01T16:42:50+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24974"
+    },
+    {
+      "text": "%md\n# RFM Segmentation",
+      "user": "anonymous",
+      "dateUpdated": "2025-03-27T14:00:29+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1743084021282_1269145429",
+      "id": "paragraph_1743084021282_1269145429",
+      "dateCreated": "2025-03-27T14:00:21+0000",
+      "status": "READY",
+      "$$hashKey": "object:24975"
+    },
+    {
+      "text": "%spark\nimport org.apache.spark.sql.functions.when\n\nval seg_ds = rfm_score_ds.withColumn(\n  \"Segment\",\n    concat(col(\"RecencyScore\").cast(\"string\"), col(\"FrequencyScore\").cast(\"string\"))\n)\n\nval seg1_ds = seg_ds.withColumn(\n  \"Segment\",\n    when(col(\"Segment\").rlike(\"^[1-2][1-2]$\"), \"Hibernating\")\n    .when(col(\"Segment\").rlike(\"^[1-2][3-4]$\"), \"At Risk\")\n    .when(col(\"Segment\").rlike(\"^[1-2]5$\"), \"Can't Lose\")\n    .when(col(\"Segment\").rlike(\"^3[1-2]$\"), \"About to Sleep\")\n    .when(col(\"Segment\").rlike(\"^33$\"), \"Need Attention\")\n    .when(col(\"Segment\").rlike(\"^[3-4][4-5]$\"), \"Loyal Customers\")\n    .when(col(\"Segment\").rlike(\"^41$\"), \"Promising\")\n    .when(col(\"Segment\").rlike(\"^51$\"), \"New Customers\")\n    .when(col(\"Segment\").rlike(\"^[4-5][2-3]$\"), \"Potential Loyalists\")\n    .when(col(\"Segment\").rlike(\"^5[4-5]$\"), \"Champions\")\n    .otherwise(\"Unknown\")\n) \n\nval agg_ds = seg1_ds.groupBy(\"Segment\").agg(\n  mean(\"recency\").alias(\"MeanRecency\"),\n  mean(\"frequency\").alias(\"MeanFrequency\"),\n  mean(\"monetary\").alias(\"MeanMonetary\"),\n  count(\"customerid\").alias(\"CustomerCount\")\n).orderBy(\"Segment\")\nagg_ds.show()",
+      "user": "anonymous",
+      "dateUpdated": "2025-04-01T16:43:38+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+-------------------+------------------+------------------+------------------+-------------+\n|            Segment|       MeanRecency|     MeanFrequency|      MeanMonetary|CustomerCount|\n+-------------------+------------------+------------------+------------------+-------------+\n|     About to Sleep|107.24047619047619|1.4142857142857144| 538.6230304856954|          420|\n|            At Risk| 406.2079326923077|3.5865384615384617|1280.8564514089644|          832|\n|         Can't Lose|336.74444444444447|14.255555555555556| 7319.568575670112|           90|\n|          Champions| 7.992619926199262| 19.82041820418204|11217.348665024043|          813|\n|        Hibernating| 444.5812324929972|1.2016806722689075| 404.6551901171953|         1428|\n|    Loyal Customers|  67.3456561922366|10.243068391866913| 4412.284225876229|         1082|\n|     Need Attention|  107.296992481203| 3.424812030075188|1363.1116908886154|          266|\n|      New Customers|10.465753424657533|               1.0|350.26986278552715|           73|\n|Potential Loyalists| 24.82957746478873|2.8830985915492957|1235.9858782065348|          710|\n|          Promising|37.926829268292686|               1.0|337.94335314767756|          164|\n+-------------------+------------------+------------------+------------------+-------------+\n\nimport org.apache.spark.sql.functions.when\n\u001b[1m\u001b[34mseg_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [customerid: int, monetary: double ... 6 more fields]\n\u001b[1m\u001b[34mseg1_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [customerid: int, monetary: double ... 6 more fields]\n\u001b[1m\u001b[34magg_ds\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [Segment: string, MeanRecency: double ... 3 more fields]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=355",
+              "$$hashKey": "object:30199"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=356",
+              "$$hashKey": "object:30200"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=357",
+              "$$hashKey": "object:30201"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=358",
+              "$$hashKey": "object:30202"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=359",
+              "$$hashKey": "object:30203"
+            },
+            {
+              "jobUrl": "http://jarvis-m.us-central1-c.c.bright-zodiac-448714-j3.internal:40993/jobs/job?id=360",
+              "$$hashKey": "object:30204"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1743084023193_847891184",
+      "id": "paragraph_1743084023193_847891184",
+      "dateCreated": "2025-03-27T14:00:23+0000",
+      "dateStarted": "2025-04-01T16:43:38+0000",
+      "dateFinished": "2025-04-01T16:43:40+0000",
+      "status": "FINISHED",
+      "$$hashKey": "object:24976"
+    },
+    {
+      "text": "%spark\n",
+      "user": "anonymous",
+      "dateUpdated": "2025-04-01T16:32:21+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {}
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1743525141750_1770608857",
+      "id": "paragraph_1743525141750_1770608857",
+      "dateCreated": "2025-04-01T16:32:21+0000",
+      "status": "READY",
+      "focus": true,
+      "$$hashKey": "object:27071"
+    }
+  ],
+  "name": "Spark Dataframe - Retail Data Analytics with Scala",
+  "id": "2KQ9A1U9X",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.10.1",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {},
+  "path": "/Spark Dataframe - Retail Data Analytics with Scala"
+}
